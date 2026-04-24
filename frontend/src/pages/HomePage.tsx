@@ -8,11 +8,10 @@ const HomePage = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#faf9f6]">
-      {/* Hero Section */}
+    <div className="flex flex-col min-h-screen bg-background">
       <section className="pt-32 pb-24 border-b border-oat">
         <div className="layout-container text-center space-y-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -24,20 +23,20 @@ const HomePage = () => {
                 {t.hero.badge}
               </span>
             </div>
-            
+
             <h1 className="text-[64px] md:text-[88px] font-normal leading-[1.00] tracking-[-0.05em] text-off-black mb-8 max-w-5xl">
               {t.hero.title1} <br /> <span className="text-fin italic">{t.hero.title2}</span>.
             </h1>
-            
+
             <p className="text-[20px] md:text-[26px] text-black/50 max-w-3xl mx-auto leading-[1.3] mb-14 font-normal">
               {t.hero.subtitle}
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-6">
               <Link to="/schemes" className="btn-intercom-primary h-16 px-12 text-[18px]">
                 {t.hero.ctaPrimary}
               </Link>
-              <Link to="/bill-analysis" className="btn-intercom-outline bg-white h-16 px-12 text-[18px]">
+              <Link to="/bill-analysis" className="btn-intercom-outline bg-white hover:text-black h-16 px-12 text-[18px]">
                 {t.hero.ctaSecondary} <ArrowRight className="ml-3 h-5 w-5" />
               </Link>
             </div>
@@ -45,7 +44,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-20 bg-white border-b border-oat">
         <div className="layout-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-16 text-center">
@@ -75,29 +73,29 @@ const HomePage = () => {
             </h2>
             <p className="text-[20px] text-black/40 font-normal">Precise tools engineered to secure your medical future.</p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
             {[
-              { 
-                icon: Activity, 
-                title: "Scheme Matcher", 
+              {
+                icon: Activity,
+                title: "Scheme Matcher",
                 desc: "Intelligent matching against 200+ health schemes using Gemini AI reasoning. Instant eligibility checks.",
                 link: "/schemes"
               },
-              { 
-                icon: Shield, 
-                title: "Bill Auditor", 
+              {
+                icon: Shield,
+                title: "Bill Auditor",
                 desc: "Audit hospital bills for overcharging with direct vision-based AI. No manual OCR required.",
                 link: "/bill-analysis"
               },
-              { 
-                icon: Database, 
-                title: "Medicine Finder", 
+              {
+                icon: Database,
+                title: "Medicine Finder",
                 desc: "Instantly swap branded medicines for PMBJP generic alternatives and save up to 90%.",
                 link: "/medicines"
               }
             ].map((f, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 whileHover={{ y: -8 }}
                 className="card-intercom flex flex-col items-start space-y-10 bg-white border-oat"
