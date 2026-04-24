@@ -1,92 +1,102 @@
-# 🛡️ AarogyaRaksha (आरोग्यरक्षा)
-### India's Health DPI Intelligence Layer — Protecting Families from Medical Bankruptcy
+# AarogyaRaksha (आरोग्यरक्षा)
 
-[![Hackathon](https://img.shields.io/badge/Hackathon-BluePrint_2026-ff5600)](https://connectsblue.com)
-[![Status](https://img.shields.io/badge/Status-Peak_Implementation-success)](#)
-[![Stack](https://img.shields.io/badge/Stack-MERN_×_Gemini_AI-blue)](#)
+### The Intelligence Layer for India's Health Digital Public Infrastructure (DPI)
 
 ---
 
-## 🏛️ Strategic Vision
-AarogyaRaksha positions itself as the **"UPI of Healthcare Finance"**. While India's Digital Public Infrastructure (DPI) stack (ABDM, PM-JAY, NHCX) has built the "pipes," AarogyaRaksha is the **citizen-facing intelligence layer** that translates complex government infrastructure into actionable, life-saving financial guidance.
+## Strategic Vision
 
-**The Problem:** 55 Million Indians fall below the poverty line every year due to catastrophic healthcare expenses. 1 in 3 families faces medical debt.
-**The Solution:** An AI-powered financial shield that identifies schemes, audits bills for inflation, and optimizes medicine costs.
+AarogyaRaksha is a high-fidelity financial advocacy platform engineered to eliminate medical bankruptcy in India. While the existing Digital Public Infrastructure (DPI) stack—including ABDM, PM-JAY, and NHCX—has established the foundational data exchange protocols, AarogyaRaksha serves as the citizen-facing intelligence layer. It translates complex government frameworks into actionable, life-saving financial guidance, functioning effectively as the "Intelligence Layer of Healthcare Finance."
 
----
+**The Problem:** Catastrophic healthcare expenses push approximately 55 million Indians below the poverty line annually. One in three families faces the burden of medical debt due to informational asymmetry and high out-of-pocket (OOP) expenditure.
 
-## ✨ Peak Features (BluePrint 2026 Edition)
-
-### 1. 🎯 AI Scheme Matcher (DPI Integrated)
-- Matches users against **200+ Central & State health schemes**.
-- **ABHA Connect**: Simulated integration with ABDM health IDs to auto-populate eligibility data.
-- **Gemini Reasoning**: Explains *why* you are eligible and provides document checklists.
-
-### 2. 🧾 Visual Bill Auditor
-- Upload hospital bills (JPG/PNG) for direct AI analysis.
-- **Benchmark Auditing**: Compares line items against national **CGHS rate cards**.
-- **Fraud Detection**: Identifies phantom charges and hospital markups (often 1000%+ on consumables).
-- **PDF Export**: Generate a professional audit report to challenge inflated bills.
-
-### 3. 💊 Generic Medicine Optimizer
-- Swap expensive branded drugs for **Jan Aushadhi (PMBJP)** alternatives.
-- **Real-time Savings**: Instant calculation of monthly/yearly savings (often 80-90%).
-- **Store Locator**: Integrated directory of 18,000+ PMBJP Kendras nationwide.
-
-### 4. 📊 Medical Expense Planner & Emergency Fund
-- AI-driven cost estimation for surgeries and chronic care (Cancer, Heart, Diabetes).
-- **Risk Scoring**: Visualizes your "Healthcare Financial Shield" strength.
-- Personalized micro-savings plans for medical emergencies.
-
-### 5. 🌍 Multi-Language DPI Core
-- Full **Hindi & English** support to ensure accessibility for rural and urban users alike.
-- Premium **Intercom-inspired UI** designed for trust and precision.
+**The Solution:** A comprehensive AI-driven financial shield that optimizes drug costs, audits hospital billing integrity, and automates government scheme discovery through deep DPI integration.
 
 ---
 
-## 🛠️ Technical Stack
-- **Frontend**: React 18, Vite, Tailwind CSS v4, Framer Motion, Shadcn UI.
-- **Backend**: Node.js, Express, MongoDB Atlas.
-- **AI Layer**: Google Gemini 2.0 Flash (Multimodal Vision + Structured Output).
-- **DPI Simulation**: ABHA Profile Gateway, JAK Store API (Mock), CGHS Benchmark Engine.
-- **Reporting**: jsPDF & AutoTable for industrial-grade audit exports.
+## Core Infrastructure Modules
+
+### 1. AI Scheme Matcher (DPI Gateway)
+The Scheme Matcher utilizes Gemini AI reasoning to cross-reference citizen profiles against a repository of over 200 Central and State health schemes.
+- **ABDM Integration**: Simulates deep integration with ABHA (Ayushman Bharat Health Account) to auto-populate eligibility parameters.
+- **Intelligent Advocacy**: Provides plain-language explanations of eligibility criteria and automated document checklists.
+- **High-Fidelity Gateway**: Features a cinematic "Intelligent Reveal" sequence that visualizes the multi-step matching process.
+
+### 2. Hospital Bill Integrity Engine
+A multimodal vision system designed to audit hospital bills for inflation and unbundled charges.
+- **CGHS Benchmarking**: Automates line-item comparison against national CGHS (Central Government Health Scheme) rate cards.
+- **Revenue Cycle Audit**: Detects phantom charges and aggressive hospital markups, particularly on surgical consumables.
+- **Dispute Resolution Reporting**: Generates professional, industrial-grade audit reports (PDF) to empower citizens to challenge inflated billing.
+
+### 3. Pharmaceutical Optimizer (PMBJP Connect)
+An optimization engine that maps branded drug prescriptions to high-quality PMBJP (Pradhan Mantri Bhartiya Janaushadhi Pariyojana) generic alternatives.
+- **Dynamic Cost Analysis**: Performs real-time calculations of projected savings over monthly and annual treatment cycles.
+- **Network Integration**: Integrated directory of over 18,000 PMBJP Kendras nationwide with localized store discovery.
+
+### 4. Medical Actuarial Planner
+A predictive financial unit that simulates future healthcare capital requirements.
+- **Scenario Simulation**: Uses AI to model 10,000+ critical health scenarios based on patient history and actuarial risk.
+- **Capital Shield Target**: Calculates a recommended "Healthcare Financial Shield" target—a liquidity buffer designed to mitigate medical risk.
 
 ---
 
-## 🚀 Quick Start
+## Technical Architecture
 
-1. **Clone & Install**
+The platform is built on a modern, high-performance stack designed for scale and data integrity.
+
+- **Frontend**: React 18 / Vite / Tailwind CSS v4 / Framer Motion.
+- **Design System**: A custom "Intercom-inspired" premium UI focusing on clarity, trust, and sophisticated animations.
+- **Backend**: Node.js / Express / MongoDB Atlas.
+- **AI Core**: Google Gemini 2.0 Flash (Multimodal Vision and Structured Output Reasoning).
+- **DPI Simulation**: Mocked ABHA Gateway and National Health Authority (NHA) benchmark engines.
+
+---
+
+## Implementation Philosophy
+
+### 1. Intelligent Reveal
+A design pattern used across the platform where complex AI analysis is presented through cinematic, multi-step gateways. This builds user trust by visualizing the underlying "system intelligence" (OCR, Benchmarking, Policy Matching).
+
+### 2. Frictionless Advocacy
+The platform minimizes user friction by automating data ingestion from bills and ABHA IDs, ensuring that sophisticated financial protection is accessible regardless of technical literacy.
+
+---
+
+## Deployment & Setup
+
+1. **Repository Configuration**
    ```bash
-   git clone https://github.com/your-repo/aarogya-raksha.git
-   cd aarogya-raksha
+   git clone https://github.com/batmanven/blueprint-hackathon.git
+   cd blueprint-hackathon
    npm install
    ```
 
-2. **Environment Configuration**
-   Create a `.env` file in both frontend and backend:
+2. **Environment Variables**
+   Configure `.env` files in both `/frontend` and `/backend` directories:
    ```env
-   GEMINI_API_KEY=your_key
-   MONGODB_URI=your_atlas_uri
-   JWT_SECRET=your_secret
+   GEMINI_API_KEY=your_api_key
+   MONGODB_URI=your_atlas_connection_string
+   JWT_SECRET=your_jwt_signing_key
    ```
 
-3. **Run Dev Server**
+3. **Development Cycle**
    ```bash
-   # Terminal 1
+   # Start Backend Services
    cd backend && npm start
-   # Terminal 2
+
+   # Start Frontend Application
    cd frontend && npm run dev
    ```
 
 ---
 
-## 📉 Impact Potential
-If adopted at scale, AarogyaRaksha targets:
-- **₹40,000 Crore** in potential annual savings via medicine optimization.
-- **40% Reduction** in out-of-pocket (OOP) expenditure through bill auditing.
-- **100% Awareness** for citizens regarding life-saving government schemes.
+## Impact Projection
+
+At scale, AarogyaRaksha aims to achieve the following:
+- **₹40,000 Crore** in potential annual savings through generic medicine substitution.
+- **40% Average Reduction** in out-of-pocket medical expenditure via billing audits.
+- **Universal Awareness** of life-saving government health schemes for all integrated users.
 
 ---
 
-**Built with ❤️ for India by Team Antigravity.**
-*"Because healthcare should never break a family."*
+_"Because healthcare should never break a family."_
