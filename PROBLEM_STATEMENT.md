@@ -28,7 +28,7 @@ AarogyaRaksha is built as a **DPI Intelligence Layer** to solve these three fail
 
 ---
 
-## 🏛️ Strategic Alignment with India's Health DPI
+## Strategic Alignment with India's Health DPI
 AarogyaRaksha is not just an app; it is a **Citizen-Facing Protocol** that sits on top of:
 - **ABDM**: Linking Health IDs for seamless eligibility.
 - **JAK**: Integrating the Jan Aushadhi Kendra network.
