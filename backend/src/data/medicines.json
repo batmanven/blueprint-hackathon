@@ -1,0 +1,82 @@
+[
+  {
+    "brandName": "Lipitor",
+    "genericName": "Atorvastatin",
+    "salt": "Atorvastatin Calcium",
+    "brandedPrice": 450,
+    "janAushadhiPrice": 18,
+    "dosage": "10mg (Pack of 10)",
+    "category": "Cholesterol",
+    "savingsPercent": 96
+  },
+  {
+    "brandName": "Augmentin 625",
+    "genericName": "Amoxycillin + Clavulanic Acid",
+    "salt": "Amoxycillin (500mg) + Clavulanic Acid (125mg)",
+    "brandedPrice": 220,
+    "janAushadhiPrice": 65,
+    "dosage": "625mg (Pack of 6)",
+    "category": "Antibiotic",
+    "savingsPercent": 70
+  },
+  {
+    "brandName": "Metformin ER",
+    "genericName": "Metformin",
+    "salt": "Metformin Hydrochloride",
+    "brandedPrice": 120,
+    "janAushadhiPrice": 10,
+    "dosage": "500mg (Pack of 10)",
+    "category": "Diabetes",
+    "savingsPercent": 92
+  },
+  {
+    "brandName": "Telma 40",
+    "genericName": "Telmisartan",
+    "salt": "Telmisartan",
+    "brandedPrice": 185,
+    "janAushadhiPrice": 15,
+    "dosage": "40mg (Pack of 10)",
+    "category": "Hypertension",
+    "savingsPercent": 92
+  },
+  {
+    "brandName": "Pan 40",
+    "genericName": "Pantoprazole",
+    "salt": "Pantoprazole Sodium",
+    "brandedPrice": 160,
+    "janAushadhiPrice": 12,
+    "dosage": "40mg (Pack of 10)",
+    "category": "Gastric/Acidity",
+    "savingsPercent": 92
+  },
+  {
+    "brandName": "Amlokind 5",
+    "genericName": "Amlodipine",
+    "salt": "Amlodipine Besylate",
+    "brandedPrice": 45,
+    "janAushadhiPrice": 6,
+    "dosage": "5mg (Pack of 10)",
+    "category": "Hypertension",
+    "savingsPercent": 86
+  },
+  {
+    "brandName": "Dolo 650",
+    "genericName": "Paracetamol",
+    "salt": "Paracetamol",
+    "brandedPrice": 30,
+    "janAushadhiPrice": 5,
+    "dosage": "650mg (Pack of 15)",
+    "category": "Fever/Pain",
+    "savingsPercent": 83
+  },
+  {
+    "brandName": "Thyronorm",
+    "genericName": "Levothyroxine",
+    "salt": "Levothyroxine Sodium",
+    "brandedPrice": 180,
+    "janAushadhiPrice": 7,
+    "dosage": "50mcg (Pack of 100)",
+    "category": "Thyroid",
+    "savingsPercent": 96
+  }
+]

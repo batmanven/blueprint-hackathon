@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Ayushman Bharat (PM-JAY)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "₹5 Lakh per family per year",
+    "description": "World's largest health insurance scheme providing secondary and tertiary care hospitalization.",
+    "eligibility": {
+      "income": "BPL / SECC 2011 listed",
+      "age": "All ages (70+ Universal)",
+      "occupation": "Vulnerable categories (Daily wage, etc.)"
+    },
+    "benefits": [
+      "Cashless treatment at empaneled hospitals",
+      "Covers 3 days pre-hospitalization and 15 days post-hospitalization",
+      "No family size cap",
+      "Covers all pre-existing conditions from Day 1"
+    ],
+    "link": "https://pmjay.gov.in"
+  },
+  {
+    "name": "Bihar Mukhyamantri Chikitsa Sahayata Kosh",
+    "type": "State",
+    "state": "Bihar",
+    "coverage": "Variable (Specific to disease)",
+    "description": "Financial assistance for serious illnesses like Cancer, Heart Disease, and Kidney failure.",
+    "eligibility": {
+      "income": "< ₹2.5 Lakh per year",
+      "residency": "Permanent resident of Bihar"
+    },
+    "benefits": [
+      "Grant for treatment in CGHS empaneled hospitals",
+      "Coverage for chronic surgeries",
+      "Applicable for hospitals outside the state in specific cases"
+    ],
+    "link": "https://biharbhawan.gov.in"
+  },
+  {
+    "name": "Ayushman Bharat – Arogya Karnataka (AB-ArK)",
+    "type": "State/Integrated",
+    "state": "Karnataka",
+    "coverage": "₹5 Lakh (BPL) / ₹1.5 Lakh (APL co-pay)",
+    "description": "Integrated health scheme covering both BPL and APL families in Karnataka.",
+    "eligibility": {
+      "BPL": "NFSA Ration Card holders",
+      "APL": "Karnataka residents (70:30 co-pay)"
+    },
+    "benefits": [
+      "Primary, secondary and tertiary care",
+      "Government referral system for private hospitals",
+      "Integrated with national PM-JAY database"
+    ],
+    "link": "https://arogyakarnataka.karnataka.gov.in"
+  },
+  {
+    "name": "Mahatma Jyotirao Phule Jan Arogya Yojana (MJPJAY)",
+    "type": "State",
+    "state": "Maharashtra",
+    "coverage": "₹1.5 Lakh - ₹5 Lakh",
+    "description": "Expanded universal health coverage for all residents of Maharashtra.",
+    "eligibility": {
+      "residency": "All residents of Maharashtra with valid ID",
+      "Universal": "As of July 2024, extended to all citizens"
+    },
+    "benefits": [
+      "Cashless hospitalization for 996+ procedures",
+      "Specific high-cost treatments up to ₹2.5 Lakh (e.g. Kidney transplant)",
+      "Network of 1000+ public and private hospitals"
+    ],
+    "link": "https://www.jeevandayee.gov.in"
+  },
+  {
+    "name": "Tamil Nadu Chief Minister's Comprehensive Health Insurance Scheme",
+    "type": "State",
+    "state": "Tamil Nadu",
+    "coverage": "₹5 Lakh per family per year",
+    "description": "Provides high-quality healthcare to low-income families in Tamil Nadu.",
+    "eligibility": {
+      "income": "< ₹1.2 Lakh per year"
+    },
+    "benefits": [
+      "Covers 1,027 procedures",
+      "Cashless treatment in empaneled hospitals",
+      "Specialized surgeries like Heart transplants and Cochlear implants"
+    ],
+    "link": "https://www.cmchistn.com"
+  }
+]

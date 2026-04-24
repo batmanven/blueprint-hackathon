@@ -1,0 +1,53 @@
+{
+  "hospital_categories": ["NABH Accredited", "Non-NABH Accredited"],
+  "standard_procedures": [
+    {
+      "description": "General Ward Consultation",
+      "cghs_rate_nabh": 350,
+      "market_average": 1200,
+      "inflation_alert": "Above 3x CGHS"
+    },
+    {
+      "description": "ICU Charges (per day)",
+      "cghs_rate_nabh": 5400,
+      "market_average": 25000,
+      "inflation_alert": "Above 4x CGHS"
+    },
+    {
+      "description": "Standard Room Rent (Semi-Private)",
+      "cghs_rate_nabh": 2000,
+      "market_average": 6000,
+      "inflation_alert": "Above 3x CGHS"
+    },
+    {
+      "description": "Complete Blood Count (CBC)",
+      "cghs_rate_nabh": 150,
+      "market_average": 500,
+      "inflation_alert": "Above 3x CGHS"
+    },
+    {
+      "description": "MRI Brain (Plain)",
+      "cghs_rate_nabh": 2500,
+      "market_average": 8000,
+      "inflation_alert": "Above 3x CGHS"
+    },
+    {
+      "description": "Normal Delivery",
+      "cghs_rate_nabh": 13800,
+      "market_average": 45000,
+      "inflation_alert": "Above 3x CGHS"
+    },
+    {
+      "description": "Cataract Surgery (Standard)",
+      "cghs_rate_nabh": 6500,
+      "market_average": 25000,
+      "inflation_alert": "Above 3x CGHS"
+    }
+  ],
+  "consumable_benchmarks": {
+    "disposable_gloves_pair": 15,
+    "surgical_mask": 5,
+    "syringe_5ml": 10,
+    "standard_iv_set": 40
+  }
+}
