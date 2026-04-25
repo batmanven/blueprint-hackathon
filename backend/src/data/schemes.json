@@ -1,88 +1,844 @@
 [
   {
-    "name": "Ayushman Bharat (PM-JAY)",
+    "id": "pmjay",
+    "name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB PM-JAY)",
     "type": "Central",
     "state": "National",
     "coverage": "₹5 Lakh per family per year",
-    "description": "World's largest health insurance scheme providing secondary and tertiary care hospitalization.",
+    "description": "World's largest health insurance scheme providing secondary and tertiary care hospitalization coverage to vulnerable families.",
     "eligibility": {
-      "income": "BPL / SECC 2011 listed",
-      "age": "All ages (70+ Universal)",
-      "occupation": "Vulnerable categories (Daily wage, etc.)"
+      "income": "BPL as per SECC 2011 data",
+      "occupation": "Daily wage workers, marginalized sections",
+      "casteCategory": "SC/ST/OBC/General (if BPL)",
+      "familySize": "No cap",
+      "age": "All ages (70+ expanded since 2024)"
     },
     "benefits": [
-      "Cashless treatment at empaneled hospitals",
-      "Covers 3 days pre-hospitalization and 15 days post-hospitalization",
-      "No family size cap",
-      "Covers all pre-existing conditions from Day 1"
+      "Cashless and paperless treatment at 24,000+ empaneled hospitals",
+      "3 days pre-hospitalization and 15 days post-hospitalization covered",
+      "All pre-existing conditions covered from Day 1",
+      "No family size or gender cap",
+      "Covers 1,500+ medical packages"
     ],
-    "link": "https://pmjay.gov.in"
+    "documents": ["Aadhaar Card", "Ration Card", "SECC Listed"],
+    "link": "https://pmjay.gov.in",
+    "applyLink": "https://pmjay.gov.in/ABHA/pmjay_eligibility"
   },
   {
-    "name": "Bihar Mukhyamantri Chikitsa Sahayata Kosh",
+    "id": "ran",
+    "name": "Rashtriya Arogya Nidhi (RAN)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "₹2 Lakh per patient",
+    "description": "Financial assistance for Below Poverty Line patients for life-threatening diseases.",
+    "eligibility": {
+      "income": "BPL only",
+      "diseaseCategory": "Cancer, Kidney failure, Heart disease, HIV/AIDS"
+    },
+    "benefits": ["One-time grant for treatment", "Empaneled hospital treatment"],
+    "documents": ["BPL Card", "Medical Reports", "Income Certificate"],
+    "link": "https://mohfw.gov.in",
+    "applyLink": "https://mohfw.gov.in/rashtriya-arogya-nidhi"
+  },
+  {
+    "id": "jsy",
+    "name": "Janani Suraksha Yojana (JSY)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "₹1,400 (Rural) / ₹1,000 (Urban)",
+    "description": "Safe motherhood intervention promoting institutional delivery among pregnant women.",
+    "eligibility": {
+      "gender": "Pregnant Women",
+      "age": "19+ years",
+      "bpl": true
+    },
+    "benefits": ["Cash assistance for institutional delivery", "Free delivery in government hospitals"],
+    "documents": ["BPL Card", "Aadhaar", "Pregnancy Card"],
+    "link": "https://nrhmmis.nic.in",
+    "applyLink": "Apply at nearest government hospital"
+  },
+  {
+    "id": "rny",
+    "name": "Rashtriya Netra Jyoti Yojana",
+    "type": "Central",
+    "state": "National",
+    "coverage": "Free cataract surgery",
+    "description": "Free cataract surgeries for elderly patients from BPL families.",
+    "eligibility": {
+      "income": "BPL",
+      "age": "60+ years",
+      "condition": "Cataract"
+    },
+    "benefits": ["Free surgery", "Free IOL implant", "Post-operative care"],
+    "documents": ["BPL Card", "Age Proof"],
+    "link": "https://npcb.nic.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "pmjay_70plus",
+    "name": "PM-JAY Ayushman Vay Vandana Card",
+    "type": "Central",
+    "state": "National",
+    "coverage": "₹5 Lakh senior citizens",
+    "description": "Health coverage for all citizens aged 70 years and above, regardless of income.",
+    "eligibility": {
+      "age": "70+ years"
+    },
+    "benefits": ["₹5 Lakh coverage per family", "All pre-existing conditions covered"],
+    "documents": ["Aadhaar", "Age Proof"],
+    "link": "https://pmjay.gov.in",
+    "applyLink": "https://pmjay.gov.in/ayushman-card"
+  },
+  {
+    "id": "pmsby",
+    "name": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "₹2 Lakh (Accidental Death) / ₹1 Lakh (Partial Disability)",
+    "description": "Accident insurance scheme with premium of just ₹20/year.",
+    "eligibility": {
+      "age": "18-70 years",
+      "bankAccount": true
+    },
+    "benefits": ["Accidental death cover", "Disability compensation"],
+    "documents": ["Aadhaar", "Bank Account"],
+    "link": "https://jansuraksha.gov.in",
+    "applyLink": "Apply through bank account"
+  },
+  {
+    "id": "pmjjby",
+    "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "₹2 Lakh (Death)",
+    "description": "Life insurance scheme with premium of just ₹436/year.",
+    "eligibility": {
+      "age": "18-50 years",
+      "bankAccount": true
+    },
+    "benefits": ["Life cover", "Death compensation to nominee"],
+    "documents": ["Aadhaar", "Bank Account"],
+    "link": "https://jansurksha.gov.in",
+    "applyLink": "Apply through bank account"
+  },
+  {
+    "id": "rsby",
+    "name": "Rashtriya Swasthya Bima Yojana (RSBY)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "₹30,000 per family",
+    "description": "Health insurance for BPL families (being integrated with PM-JAY).",
+    "eligibility": {
+      "income": "BPL"
+    },
+    "benefits": ["Hospitalization cover", "Cashless treatment"],
+    "documents": ["BPL Card"],
+    "link": "https://rsby.gov.in",
+    "applyLink": "Apply at empaneled hospital"
+  },
+  {
+    "id": "ayushman_cap",
+    "name": "Ayushman Bharat CAP",
+    "type": "Central",
+    "state": "National",
+    "coverage": "₹5 Lakh",
+    "description": "Extension of PM-JAY to ASHA workers, anganwadi workers, and other frontline workers.",
+    "eligibility": {
+      "occupation": "ASHA, Anganwadi, Minorities"
+    },
+    "benefits": ["Full health coverage", "All pre-existing conditions"],
+    "documents": ["Occupation Certificate"],
+    "link": "https://pmjay.gov.in",
+    "applyLink": "Apply through respective department"
+  },
+  {
+    "id": "dcp",
+    "name": "Dialysis Programme (NHA)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "Free dialysis for BPL patients",
+    "description": "Free dialysis services through PPP model across district hospitals.",
+    "eligibility": {
+      "income": "BPL",
+      "condition": "Kidney failure"
+    },
+    "benefits": ["Free dialysis", "Free supplies"],
+    "documents": ["BPL Card", "Medical Certificate"],
+    "link": "https://nha.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "ncsp",
+    "name": "National Cancer Screening Programme",
+    "type": "Central",
+    "state": "National",
+    "coverage": "Free screening",
+    "description": "Oral, breast, and cervical cancer screening at government health facilities.",
+    "eligibility": {
+      "age": "30+ years"
+    },
+    "benefits": ["Free screening", "Free treatment if detected"],
+    "documents": ["Aadhaar"],
+    "link": "https://ncd.nic.in",
+    "applyLink": "Visit nearest PHC"
+  },
+  {
+    "id": "sahaj",
+    "name": "Sanjivani - Free Generic Medicines",
     "type": "State",
-    "state": "Bihar",
-    "coverage": "Variable (Specific to disease)",
-    "description": "Financial assistance for serious illnesses like Cancer, Heart Disease, and Kidney failure.",
+    "state": "Madhya Pradesh",
+    "coverage": "Free generic medicines",
+    "description": "Free generic medicines at all government health facilities.",
     "eligibility": {
-      "income": "< ₹2.5 Lakh per year",
-      "residency": "Permanent resident of Bihar"
+      "residency": "MP Resident"
     },
-    "benefits": [
-      "Grant for treatment in CGHS empaneled hospitals",
-      "Coverage for chronic surgeries",
-      "Applicable for hospitals outside the state in specific cases"
-    ],
-    "link": "https://biharbhawan.gov.in"
+    "benefits": ["Free medicines", "Free diagnostics"],
+    "documents": ["Aadhaar"],
+    "link": "https://mp.gov.in",
+    "applyLink": "Visit any government hospital"
   },
   {
-    "name": "Ayushman Bharat – Arogya Karnataka (AB-ArK)",
-    "type": "State/Integrated",
-    "state": "Karnataka",
-    "coverage": "₹5 Lakh (BPL) / ₹1.5 Lakh (APL co-pay)",
-    "description": "Integrated health scheme covering both BPL and APL families in Karnataka.",
+    "id": "arogyasri_ap",
+    "name": "Aarogyasri Health Insurance (Andhra Pradesh)",
+    "type": "State",
+    "state": "Andhra Pradesh",
+    "coverage": "₹5 Lakh per family",
+    "description": "Comprehensive health insurance for below poverty line families in AP.",
     "eligibility": {
-      "BPL": "NFSA Ration Card holders",
-      "APL": "Karnataka residents (70:30 co-pay)"
+      "income": "< ₹2.5 Lakh/annum or NFSA card",
+      "occupation": "All BPL residents"
     },
-    "benefits": [
-      "Primary, secondary and tertiary care",
-      "Government referral system for private hospitals",
-      "Integrated with national PM-JAY database"
-    ],
-    "link": "https://arogyakarnataka.karnataka.gov.in"
+    "benefits": ["Cashless treatment", "1,500+ procedures covered", "Travel allowance"],
+    "documents": ["BPL Card/NFSA", "Aadhaar", "Ration Card"],
+    "link": "https://arogyasri.ap.gov.in",
+    "applyLink": "https://arogyasri.ap.gov.in/apply"
   },
   {
+    "id": "arogyasri_ts",
+    "name": "Aarogya Lakshmi (Telangana)",
+    "type": "State",
+    "state": "Telangana",
+    "coverage": "₹5 Lakh per family",
+    "description": "Integrated health scheme for BPL families in Telangana.",
+    "eligibility": {
+      "income": "< ₹2.5 Lakh/annum"
+    },
+    "benefits": ["Cashless treatment", "Covered procedures"],
+    "documents": ["NFSA Card", "Aadhaar"],
+    "link": "https://telangana.gov.in",
+    "applyLink": "Apply through Mandal Revenue Officer"
+  },
+  {
+    "id": "mjpjay",
     "name": "Mahatma Jyotirao Phule Jan Arogya Yojana (MJPJAY)",
     "type": "State",
     "state": "Maharashtra",
     "coverage": "₹1.5 Lakh - ₹5 Lakh",
-    "description": "Expanded universal health coverage for all residents of Maharashtra.",
+    "description": "Universal health scheme covering all Maharashtra residents.",
     "eligibility": {
-      "residency": "All residents of Maharashtra with valid ID",
-      "Universal": "As of July 2024, extended to all citizens"
+      "residency": "Maharashtra resident",
+      "universal": "Extended to all citizens since 2024"
     },
-    "benefits": [
-      "Cashless hospitalization for 996+ procedures",
-      "Specific high-cost treatments up to ₹2.5 Lakh (e.g. Kidney transplant)",
-      "Network of 1000+ public and private hospitals"
-    ],
-    "link": "https://www.jeevandayee.gov.in"
+    "benefits": ["Cashless hospitalization", "996+ procedures", "Empaneled hospital network"],
+    "documents": ["Aadhaar", "Ration Card/Maha Card"],
+    "link": "https://jeevandayee.gov.in",
+    "applyLink": "https://jeevandayee.gov.in/mjpjay"
   },
   {
-    "name": "Tamil Nadu Chief Minister's Comprehensive Health Insurance Scheme",
+    "id": "cmchis",
+    "name": "Chief Minister's Comprehensive Health Insurance Scheme (Tamil Nadu)",
     "type": "State",
     "state": "Tamil Nadu",
-    "coverage": "₹5 Lakh per family per year",
-    "description": "Provides high-quality healthcare to low-income families in Tamil Nadu.",
+    "coverage": "₹5 Lakh per family",
+    "description": "Health insurance for low-income families in Tamil Nadu.",
     "eligibility": {
-      "income": "< ₹1.2 Lakh per year"
+      "income": "< ₹1.2 Lakh/annum"
     },
-    "benefits": [
-      "Covers 1,027 procedures",
-      "Cashless treatment in empaneled hospitals",
-      "Specialized surgeries like Heart transplants and Cochlear implants"
-    ],
-    "link": "https://www.cmchistn.com"
+    "benefits": ["1,027 procedures covered", "Heart transplant, cochlear implants", "Cashless treatment"],
+    "documents": ["Income Certificate", "Aadhaar", "Ration Card"],
+    "link": "https://cmchistn.com",
+    "applyLink": "https://www.cmchistn.com/apply"
+  },
+  {
+    "id": "swasthya_sathi",
+    "name": "Swasthya Sathi (West Bengal)",
+    "type": "State",
+    "state": "West Bengal",
+    "coverage": "₹5 Lakh per family",
+    "description": "Universal health scheme for all resident families of West Bengal.",
+    "eligibility": {
+      "residency": "WB Resident"
+    },
+    "benefits": ["Cashless treatment", "All pre-existing conditions"],
+    "documents": ["Aadhaar", "WB Ration Card"],
+    "link": "https://swasthasathi.gov.in",
+    "applyLink": "Apply at local hospital"
+  },
+  {
+    "id": "bsky",
+    "name": "Biju Swasthya Kalyan Yojana (Odisha)",
+    "type": "State",
+    "state": "Odisha",
+    "coverage": "₹10 Lakh per family",
+    "description": "Healthcare for all Odisha residents with additional coverage.",
+    "eligibility": {
+      "residency": "Odisha resident"
+    },
+    "benefits": ["Free treatment in govt hospitals", "₹10 Lakh coverage", "Universal"],
+    "documents": ["Aadhaar"],
+    "link": "https://bsky.odisha.gov.in",
+    "applyLink": "Apply atBlock/DA"
+  },
+  {
+    "id": "kasp",
+    "name": "Karunya Arogya Suraksha Padhathi (KASP)",
+    "type": "State",
+    "state": "Kerala",
+    "coverage": "₹5 Lakh per family",
+    "description": "Health insurance for BPL families in Kerala.",
+    "eligibility": {
+      "income": "Below poverty line as per SECC"
+    },
+    "benefits": ["Cashless treatment", "Pre and post hospitalization"],
+    "documents": ["BPL Card", "Aadhaar"],
+    "link": "https://karunya.kerala.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "ma_yojana",
+    "name": "Maharaja AYUSHMAN (Gujarat)",
+    "type": "State",
+    "state": "Gujarat",
+    "coverage": "₹5 Lakh per family",
+    "description": "Health scheme for all Gujarat families with BPL/AY cards.",
+    "eligibility": {
+      "rationCard": "AAY/Priority Card"
+    },
+    "benefits": ["Cashless treatment", "Empaneled hospitals"],
+    "documents": ["Ration Card", "Aadhaar"],
+    "link": "https://gujarat.gov.in",
+    "applyLink": "Apply at local hospital"
+  },
+  {
+    "id": "ddssy",
+    "name": "Deen Dayal Swasthya Seva Yojana (Goa)",
+    "type": "State",
+    "state": "Goa",
+    "coverage": "₹2.5 Lakh per family",
+    "description": "Universal health coverage for Goa residents.",
+    "eligibility": {
+      "residency": "Goa resident"
+    },
+    "benefits": ["Cashless treatment", "Day care procedures"],
+    "documents": ["Aadhaar", "Goa Ration Card"],
+    "link": "https://ddssy.goa.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "cmhhis",
+    "name": "Chief Minister's Himachal Health Insurance (Himachal Pradesh)",
+    "type": "State",
+    "state": "Himachal Pradesh",
+    "coverage": "₹5 Lakh per family",
+    "description": "Health insurance for HP residents.",
+    "eligibility": {
+      "rationCard": "AAY/Priority"
+    },
+    "benefits": ["Cashless treatment"],
+    "documents": ["Aadhaar", "Ration Card"],
+    "link": "https://hppms.nic.in",
+    "applyLink": "Apply at CSK/Block"
+  },
+  {
+    "id": "bsk_yoga",
+    "name": "Bihar Mukhyamantri Chikitsa Sahayata Kosh",
+    "type": "State",
+    "state": "Bihar",
+    "coverage": "Variable",
+    "description": "Financial assistance for serious illnesses like Cancer, Heart, Kidney.",
+    "eligibility": {
+      "income": "< ₹2.5 Lakh/annum",
+      "residency": "Bihar resident"
+    },
+    "benefits": ["Grant for treatment at CGHS hospitals"],
+    "documents": ["Income Certificate", "Medical Reports"],
+    "link": "https://health.bihar.gov.in",
+    "applyLink": "Apply through BDO"
+  },
+  {
+    "id": "ab_ark",
+    "name": "Ayushman Bharat Arogya Karnataka (AB-ArK)",
+    "type": "State",
+    "state": "Karnataka",
+    "coverage": "₹5 Lakh (BPL) / ₹1.5 Lakh (APL co-pay)",
+    "description": "Integrated scheme for both BPL and APL families.",
+    "eligibility": {
+      "bpl": "NFSA Ration holders",
+      "apl": "Karnataka residents (70:30 co-pay)"
+    },
+    "benefits": ["Primary, secondary, tertiary care", "Referral system"],
+    "documents": ["Ration Card", "Aadhaar"],
+    "link": "https://arogyakarnataka.karnataka.gov.in",
+    "applyLink": "https://arogyakarnataka.karnataka.gov.in"
+  },
+  {
+    "id": "up_scheme",
+    "name": "UP Mukhyamantri Chikitsa Sahayata Kosh",
+    "type": "State",
+    "state": "Uttar Pradesh",
+    "coverage": "Variable",
+    "description": "Medical assistance for BPL families in UP.",
+    "eligibility": {
+      "income": "BPL",
+      "residency": "UP resident"
+    },
+    "benefits": ["Financial assistance for treatment"],
+    "documents": ["BPL Card", "Medical Reports"],
+    "link": "https://up.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "raj_scheme",
+    "name": "Bhamashah Swasthya Yojana (Rajasthan)",
+    "type": "State",
+    "state": "Rajasthan",
+    "coverage": "₹5 Lakh",
+    "description": "Health insurance for NFSA cardholders in Rajasthan.",
+    "eligibility": {
+      "rationCard": "NFSA card"
+    },
+    "benefits": ["Cashless treatment"],
+    "documents": ["NFSA Card", "Aadhaar"],
+    "link": "https://bhamashah.rajasthan.gov.in",
+    "applyLink": "Apply at empaneled hospital"
+  },
+  {
+    "id": "cg_scheme",
+    "name": "Chief Minister Health Insurance (Chhattisgarh)",
+    "type": "State",
+    "state": "Chhattisgarh",
+    "coverage": "₹5 Lakh per family",
+    "description": "Health scheme for Chhattisgarh residents.",
+    "eligibility": {
+      "rationCard": "NFSA/AAY"
+    },
+    "benefits": ["Cashless treatment"],
+    "documents": ["Ration Card", "Aadhaar"],
+    "link": "https://cg.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "jk_scheme",
+    "name": "Sehat黄金 Health Scheme (Jammu & Kashmir)",
+    "type": "State",
+    "state": "Jammu and Kashmir",
+    "coverage": "₹5 Lakh",
+    "description": "Health insurance for J&K residents.",
+    "eligibility": {
+      "residency": "J&K resident"
+    },
+    "benefits": ["Cashless treatment"],
+    "documents": ["Aadhaar", "Residence Certificate"],
+    "link": "https://jk.gov.in",
+    "applyLink": "Apply at empaneled hospital"
+  },
+  {
+    "id": "jh_scheme",
+    "name": "Jharkhand Mukhyamantri Chikitsa Sahayata Kosh",
+    "type": "State",
+    "state": "Jharkhand",
+    "coverage": "Variable",
+    "description": "Medical assistance for Jharakhand BPL families.",
+    "eligibility": {
+      "income": "BPL",
+      "residency": "Jharkhand resident"
+    },
+    "benefits": ["Financial assistance"],
+    "documents": ["BPL Card"],
+    "link": "https://jharkhand.gov.in",
+    "applyLink": "Apply at Block Office"
+  },
+  {
+    "id": "uk_scheme",
+    "name": "Uttarakhand Mukhyamantri Chikitsa Sahayata Kosh",
+    "type": "State",
+    "state": "Uttarakhand",
+    "coverage": "Variable",
+    "description": "Medical assistance for BPL families.",
+    "eligibility": {
+      "income": "BPL"
+    },
+    "benefits": ["Financial assistance"],
+    "documents": ["BPL Card"],
+    "link": "https://uttarakhand.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "hp_scheme",
+    "name": "Himachal Pradesh Mukhyamantri Chikitsa Sahayata Kosh",
+    "type": "State",
+    "state": "Himachal Pradesh",
+    "coverage": "Variable",
+    "description": "Medical assistance for HP BPL families.",
+    "eligibility": {
+      "income": "BPL"
+    },
+    "benefits": ["Financial assistance"],
+    "documents": ["BPL Card"],
+    "link": "https://hp.gov.in",
+    "applyLink": "Apply at RD Office"
+  },
+  {
+    "id": "mn_scheme",
+    "name": "Chief Minister's Health Insurance (Manipur)",
+    "type": "State",
+    "state": "Manipur",
+    "coverage": "Variable",
+    "description": "Health scheme for Manipur residents.",
+    "eligibility": {
+      "residency": "Manipur resident"
+    },
+    "benefits": ["Cashless treatment"],
+    "documents": ["Aadhaar", "Residence Certificate"],
+    "link": "https://manipur.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "nl_scheme",
+    "name": "Chief Minister's Health Scheme (Nagaland)",
+    "type": "State",
+    "state": "Nagaland",
+    "coverage": "Variable",
+    "description": "Health assistance for Nagaland residents.",
+    "eligibility": {
+      "residency": "Nagaland resident"
+    },
+    "benefits": ["Healthcare support"],
+    "documents": ["Aadhaar"],
+    "link": "https://nagaland.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "ml_scheme",
+    "name": "Meghalaya Health Insurance",
+    "type": "State",
+    "state": "Meghalaya",
+    "coverage": "Variable",
+    "description": "Health scheme for Meghalaya residents.",
+    "eligibility": {
+      "residency": "Meghalaya resident"
+    },
+    "benefits": ["Healthcare coverage"],
+    "documents": ["Aadhaar", "Caste Certificate"],
+    "link": "https://meghalaya.gov.in",
+    "applyLink": "Apply at PHC"
+  },
+  {
+    "id": "tro_scheme",
+    "name": "Tripura Health Insurance",
+    "type": "State",
+    "state": "Tripura",
+    "coverage": "Variable",
+    "description": "Health scheme for Tripura residents.",
+    "eligibility": {
+      "residency": "Tripura resident"
+    },
+    "benefits": ["Healthcare coverage"],
+    "documents": ["Aadhaar", "BPL Card"],
+    "link": "https://tripura.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "miz_scheme",
+    "name": "Mizoram Health Insurance",
+    "type": "State",
+    "state": "Mizoram",
+    "coverage": "Variable",
+    "description": "Health scheme for Mizoram families.",
+    "eligibility": {
+      "residency": "Mizoram resident"
+    },
+    "benefits": ["Healthcare coverage"],
+    "documents": ["Aadhaar"],
+    "link": "https://mizoram.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "sk_scheme",
+    "name": "Sikkim Health Insurance",
+    "type": "State",
+    "state": "Sikkim",
+    "coverage": "Variable",
+    "description": "Health scheme for Sikkim residents.",
+    "eligibility": {
+      "residency": "Sikkim resident"
+    },
+    "benefits": ["Healthcare coverage"],
+    "documents": ["Aadhaar", "Residence Certificate"],
+    "link": "https://sikkim.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "py_scheme",
+    "name": "Puducherry Health Scheme",
+    "type": "State",
+    "state": "Puducherry",
+    "coverage": "Variable",
+    "description": "Health assistance for Puducherry residents.",
+    "eligibility": {
+      "residency": "Puducherry resident"
+    },
+    "benefits": ["Healthcare support"],
+    "documents": ["Aadhaar"],
+    "link": "https://py.gov.in",
+    "applyLink": "Apply at GH/CHC"
+  },
+  {
+    "id": "ch_scheme",
+    "name": "Chandigarh Health Scheme",
+    "type": "UT",
+    "state": "Chandigarh",
+    "coverage": "Variable",
+    "description": "Health assistance for Chandigarh residents.",
+    "eligibility": {
+      "residency": "Chandigarh resident"
+    },
+    "benefits": ["Healthcare coverage"],
+    "documents": ["Aadhaar"],
+    "link": "https://chd.gov.in",
+    "applyLink": "Apply at GMCH"
+  },
+  {
+    "id": "dn_hav",
+    "name": "DN Hav Public Health Assistance",
+    "type": "UT",
+    "state": "Dadra Nagar Haveri",
+    "coverage": "Variable",
+    "description": "Health scheme for D&NH residents.",
+    "eligibility": {
+      "residency": "DN Residents"
+    },
+    "benefits": ["Healthcare support"],
+    "documents": ["Aadhaar"],
+    "link": "https://dnhas.in",
+    "applyLink": "Apply at UT Hospital"
+  },
+  {
+    "id": "lak_scheme",
+    "name": "Lakshadweep Health Scheme",
+    "type": "UT",
+    "state": "Lakshadweep",
+    "coverage": "Variable",
+    "description": "Health assistance for Lakshadweep islands.",
+    "eligibility": {
+      "residency": "Lakshadweep resident"
+    },
+    "benefits": ["Healthcare coverage"],
+    "documents": ["Aadhaar"],
+    "link": "https://lakshadweep.gov.in",
+    "applyLink": "Apply at District Hospital"
+  },
+  {
+    "id": "anp_scheme",
+    "name": "Andaman Health Scheme",
+    "type": "UT",
+    "state": "Andaman Nicobar",
+    "coverage": "Variable",
+    "description": "Health assistance for A&N islanders.",
+    "eligibility": {
+      "residency": "Andaman resident"
+    },
+    "benefits": ["Healthcare coverage"],
+    "documents": ["Aadhaar"],
+    "link": "https://andaman.gov.in",
+    "applyLink": "Apply at GBPH"
+  },
+  {
+    "id": "ldh_scheme",
+    "name": "Ladakh Health Assistance",
+    "type": "UT",
+    "state": "Ladakh",
+    "coverage": "Variable",
+    "description": "Healthcare for Ladakh region.",
+    "eligibility": {
+      "residency": "Ladakh resident"
+    },
+    "benefits": ["Healthcare support"],
+    "documents": ["Aadhaar", "Ladakh Card"],
+    "link": "https://ladakh.gov.in",
+    "applyLink": "Apply at Leh/Kargil Hospital"
+  },
+  {
+    "id": "pmjay_seva",
+    "name": "PM-JAY SEVA Card (Online Application)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "₹5 Lakh",
+    "description": "Digital PM-JAY card generation and verification.",
+    "eligibility": {
+      "sec2011": "SECC 2011 listed family"
+    },
+    "benefits": ["Digital card generation", "Verification status"],
+    "documents": ["Aadhaar", "Mobile"],
+    "link": "https://pmjay.gov.in",
+    "applyLink": "https://pmjay.gov.in/seva"
+  },
+  {
+    "id": "jan_aushadhi",
+    "name": "Jan Aushadhi Scheme",
+    "type": "Central",
+    "state": "National",
+    "coverage": "50-90% medicines discount",
+    "description": "Affordable generic medicines through 18,646 Jan Aushadhi stores.",
+    "eligibility": {
+      "residency": "All Indian citizens"
+    },
+    "benefits": ["Generic medicines at 50-90% discount", "2,100+ medicines", "315+ medical devices"],
+    "documents": ["No documents needed"],
+    "link": "https://janaushadhi.gov.in",
+    "applyLink": "Visit nearest Jan Aushadhi Kendra"
+  },
+  {
+    "id": "abha_card",
+    "name": "ABHA Health ID Card",
+    "type": "Central",
+    "state": "National",
+    "coverage": "Digital Health ID",
+    "description": "Ayushman Bharat Health ID for digital health records.",
+    "eligibility": {
+      "residency": "All Indian citizens"
+    },
+    "benefits": ["Digital health records", "PHR app access", "Privacy-protected"],
+    "documents": ["Aadhaar"],
+    "link": "https://abha.abdm.gov.in",
+    "applyLink": "https://abha.abdm.gov.in/registration"
+  },
+  {
+    "id": "esic_scheme",
+    "name": "ESI Corporation Health Insurance",
+    "type": "Central",
+    "state": "National",
+    "coverage": "Medical benefits for employees",
+    "description": "Health insurance for organized sector employees.",
+    "eligibility": {
+      "occupation": "Factory/Establishment employees",
+      "wage": "< ₹21,000/month"
+    },
+    "benefits": ["Medical treatment", "Sickness benefit", "Maternity benefit", "Disability benefit"],
+    "documents": ["ESIC IP card", "Employment certificate"],
+    "link": "https://esic.gov.in",
+    "applyLink": "Apply through employer"
+  },
+  {
+    "id": "cghs_scheme",
+    "name": "CGHS (Central Government Health Scheme)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "Full government employee health",
+    "description": "Healthcare for Central Government employees and pensioners.",
+    "eligibility": {
+      "occupation": "Central Govt employee/pensioner"
+    },
+    "benefits": ["Cashless treatment", "Allopathy + AYUSH", "Pan India empanelled hospitals"],
+    "documents": ["Service Book", "CGHS Card"],
+    "link": "https://cghs.gov.in",
+    "applyLink": "Apply through office"
+  },
+  {
+    "id": "wbms",
+    "name": "WBMS - World Bank Medical Support",
+    "type": "NGO",
+    "state": "National",
+    "coverage": "Variable",
+    "description": "Medical financial support for underprivileged patients.",
+    "eligibility": {
+      "income": "Below ₹1 Lakh/annum",
+      "bpl": true
+    },
+    "benefits": ["Medical grants", "Free treatment"],
+    "documents": ["BPL Card", "Income Certificate", "Medical Reports"],
+    "link": "https://wbms.ngo",
+    "applyLink": "Contact nearest WBMS office"
+  },
+  {
+    "id": "cancer_fund",
+    "name": "Indian Cancer Relief Fund",
+    "type": "NGO",
+    "state": "National",
+    "coverage": "Variable",
+    "description": "Financial support for cancer patients.",
+    "eligibility": {
+      "condition": "Cancer",
+      "income": "Below ₹2 Lakh/annum"
+    },
+    "benefits": ["Treatment grants", "Free medicines in some cases"],
+    "documents": ["Medical Reports", "Income Certificate"],
+    "link": "https://cancerfundindia.org",
+    "applyLink": "Apply online"
+  },
+  {
+    "id": "kidney_fund",
+    "name": "National Kidney Foundation India",
+    "type": "NGO",
+    "state": "National",
+    "coverage": "Variable",
+    "description": "Financial assistance for kidney patients.",
+    "eligibility": {
+      "condition": "Kidney disease",
+      "income": "Below ₹2 Lakh/annum"
+    },
+    "benefits": ["Dialysis support", "Transplant grants"],
+    "documents": ["Medical Reports", "Income Certificate"],
+    "link": "https://nkfi.org",
+    "applyLink": "Apply online"
+  },
+  {
+    "id": "hfh",
+    "name": "Help For Hunger Medical Aid",
+    "type": "NGO",
+    "state": "National",
+    "coverage": "Variable",
+    "description": "Emergency medical assistance for the poor.",
+    "eligibility": {
+      "income": "Below ₹1 Lakh/annum",
+      "emergency": true
+    },
+    "benefits": ["Emergency medical grants"],
+    "documents": ["Income Certificate", "Medical Emergency Proof"],
+    "link": "https://helpforhunger.org",
+    "applyLink": "Apply online"
+  },
+  {
+    "id": "cankid",
+    "name": "CanKid Foundation - Pediatric Cancer",
+    "type": "NGO",
+    "state": "National",
+    "coverage": "Variable",
+    "description": "Financial support for children with cancer.",
+    "eligibility": {
+      "condition": "Pediatric cancer",
+      "age": "0-18 years",
+      "income": "Below ₹2.5 Lakh/annum"
+    },
+    "benefits": ["Treatment support", "Nutritional support", "Transport allowance"],
+    "documents": ["Medical Reports", "Income Certificate"],
+    "link": "https://cankid.org",
+    "applyLink": "Apply online"
+  },
+  {
+    "id": "mci",
+    "name": "Medical Credit Card - Interest-Free Loan",
+    "type": "FinTech",
+    "state": "National",
+    "coverage": "Up to ₹3 Lakh interest-free",
+    "description": "Interest-free loan for medical treatment.",
+    "eligibility": {
+      "creditScore": "CIBIL 650+ or salary slip",
+      "income": "Regular income"
+    },
+    "benefits": ["Interest-free credit", "No collateral", "Flexible repayment"],
+    "documents": ["ID Proof", "Income Proof", "Bank Statement"],
+    "link": "https://medicalcreditcard.in",
+    "applyLink": "Apply online"
   }
 ]
