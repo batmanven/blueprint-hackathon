@@ -1,50 +1,67 @@
 [
   {
-    "brandName": "Lipitor",
-    "genericName": "Atorvastatin",
-    "salt": "Atorvastatin Calcium",
-    "brandedPrice": 450,
-    "janAushadhiPrice": 18,
-    "dosage": "10mg (Pack of 10)",
-    "category": "Cholesterol",
-    "savingsPercent": 96
+    "brandName": "Telma 40",
+    "genericName": "Telmisartan",
+    "salt": "Telmisartan (40mg)",
+    "brandedPrice": 180,
+    "janAushadhiPrice": 25,
+    "dosage": "40mg",
+    "category": "Hypertension",
+    "savingsPercent": 86
   },
   {
-    "brandName": "Augmentin 625",
+    "brandName": "Lipitor 10",
+    "genericName": "Atorvastatin",
+    "salt": "Atorvastatin Calcium (10mg)",
+    "brandedPrice": 450,
+    "janAushadhiPrice": 45,
+    "dosage": "10mg",
+    "category": "Cholesterol",
+    "savingsPercent": 90
+  },
+  {
+    "brandName": "Glycomet 500",
+    "genericName": "Metformin",
+    "salt": "Metformin Hydrochloride (500mg)",
+    "brandedPrice": 120,
+    "janAushadhiPrice": 18,
+    "dosage": "500mg",
+    "category": "Diabetes",
+    "savingsPercent": 85
+  },
+  {
+    "brandName": "Augmentin 625 Duo",
     "genericName": "Amoxycillin + Clavulanic Acid",
     "salt": "Amoxycillin (500mg) + Clavulanic Acid (125mg)",
     "brandedPrice": 220,
     "janAushadhiPrice": 65,
-    "dosage": "625mg (Pack of 6)",
+    "dosage": "625mg",
     "category": "Antibiotic",
     "savingsPercent": 70
   },
   {
-    "brandName": "Metformin ER",
-    "genericName": "Metformin",
-    "salt": "Metformin Hydrochloride",
-    "brandedPrice": 120,
-    "janAushadhiPrice": 10,
-    "dosage": "500mg (Pack of 10)",
-    "category": "Diabetes",
-    "savingsPercent": 92
+    "brandName": "Azithral 500",
+    "genericName": "Azithromycin",
+    "salt": "Azithromycin (500mg)",
+    "brandedPrice": 95,
+    "janAushadhiPrice": 14,
+    "dosage": "500mg",
+    "category": "Antibiotic",
+    "savingsPercent": 85
   },
   {
-    "brandName": "Telma 40",
-    "genericName": "Telmisartan",
-    "salt": "Telmisartan",
-    "brandedPrice": 185,
-    "janAushadhiPrice": 15,
-    "dosage": "40mg (Pack of 10)",
-    "category": "Hypertension",
-    "savingsPercent": 92
+    "brandName": "Crocin Advance",
+    "genericName": "Paracetamol",
+    "salt": "Paracetamol (500mg)",
+    "brandedPrice": 30,
+    "janAushadhiPrice": 5,
+    "dosage": "500mg",
+    "category": "Analgesic",
+    "savingsPercent": 83
   },
   {
-    "brandName": "Pan 40",
+    "brandName": "Pantocid 40",
     "genericName": "Pantoprazole",
-    "salt": "Pantoprazole Sodium",
-    "brandedPrice": 160,
-    "janAushadhiPrice": 12,
     "dosage": "40mg (Pack of 10)",
     "category": "Gastric/Acidity",
     "savingsPercent": 92

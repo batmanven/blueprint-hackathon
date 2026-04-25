@@ -44,10 +44,31 @@
       "inflation_alert": "Above 3x CGHS"
     }
   ],
-  "consumable_benchmarks": {
-    "disposable_gloves_pair": 15,
-    "surgical_mask": 5,
-    "syringe_5ml": 10,
-    "standard_iv_set": 40
+  "consumables": {
+    "normal_saline_500ml": { "benchmark": 30, "market_avg": 40, "hospital_max": 500 },
+    "surgical_gloves_pair": { "benchmark": 10, "market_avg": 15, "hospital_max": 150 },
+    "iv_set": { "benchmark": 25, "market_avg": 35, "hospital_max": 300 },
+    "bandage_roll": { "benchmark": 15, "market_avg": 25, "hospital_max": 200 },
+    "syrings_5ml": { "benchmark": 5, "market_avg": 8, "hospital_max": 80 },
+    "n95_mask": { "benchmark": 20, "market_avg": 30, "hospital_max": 250 },
+    "surgical_mask": { "benchmark": 3, "market_avg": 5, "hospital_max": 50 }
+  },
+  "procedures": {
+    "cataract_surgery_phaco": { "cghs_rate": 10800, "private_avg": 45000, "description": "Includes IOL lens and procedure" },
+    "angioplasty_single_stent": { "cghs_rate": 65000, "private_avg": 180000, "description": "Excludes stent cost (capped by NPPA)" },
+    "normal_delivery": { "cghs_rate": 12000, "private_avg": 60000, "description": "Public health benchmark" },
+    "c_section": { "cghs_rate": 18000, "private_avg": 120000, "description": "Surgical delivery" },
+    "knee_replacement_single": { "cghs_rate": 120000, "private_avg": 350000, "description": "Excludes implant cost" },
+    "mri_brain_plain": { "cghs_rate": 2500, "private_avg": 8000, "description": "High resonance imaging" },
+    "ct_scan_abdomen": { "cghs_rate": 2000, "private_avg": 6000, "description": "Computed Tomography" },
+    "blood_test_cbc": { "cghs_rate": 150, "private_avg": 600, "description": "Complete Blood Count" },
+    "lipid_profile": { "cghs_rate": 300, "private_avg": 1200, "description": "Cholesterol audit" }
+  },
+  "room_rates_per_day": {
+    "general_ward": { "cghs_rate": 1000, "private_avg": 3500 },
+    "semi_private": { "cghs_rate": 2000, "private_avg": 6500 },
+    "private_room": { "cghs_rate": 3000, "private_avg": 12000 },
+    "icu_without_ventilator": { "cghs_rate": 5000, "private_avg": 25000 },
+    "icu_with_ventilator": { "cghs_rate": 8000, "private_avg": 45000 }
   }
 }

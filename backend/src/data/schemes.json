@@ -8,81 +8,295 @@
     "eligibility": {
       "income": "BPL / SECC 2011 listed",
       "age": "All ages (70+ Universal)",
-      "occupation": "Vulnerable categories (Daily wage, etc.)"
+      "occupation": "Vulnerable categories"
     },
     "benefits": [
       "Cashless treatment at empaneled hospitals",
       "Covers 3 days pre-hospitalization and 15 days post-hospitalization",
-      "No family size cap",
       "Covers all pre-existing conditions from Day 1"
     ],
     "link": "https://pmjay.gov.in"
   },
   {
-    "name": "Bihar Mukhyamantri Chikitsa Sahayata Kosh",
+    "name": "PM-JAY Senior Citizens (70+)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "₹5 Lakh (Shared or Exclusive)",
+    "description": "Universal health coverage for all senior citizens aged 70 years and above.",
+    "eligibility": {
+      "age": "70+ Years",
+      "income": "Universal (No income cap)"
+    },
+    "benefits": [
+      "Exclusive ₹5 Lakh top-up if already in PM-JAY",
+      "Standalone ₹5 Lakh cover for non-PM-JAY families",
+      "Coverage for geriatric specific procedures"
+    ],
+    "link": "https://dashboard.pmjay.gov.in"
+  },
+  {
+    "name": "Rashtriya Arogya Nidhi (RAN)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "Up to ₹15 Lakh",
+    "description": "Financial assistance to patients living below poverty line for treatment of life-threatening diseases.",
+    "eligibility": {
+      "income": "BPL",
+      "condition": "Life-threatening diseases (Cancer, Kidney, etc.)"
+    },
+    "benefits": [
+      "One-time grant for treatment in super-specialty government hospitals",
+      "Covers expensive surgeries and implants"
+    ],
+    "link": "https://main.mohfw.gov.in"
+  },
+  {
+    "name": "Janani Suraksha Yojana (JSY)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "Cash Incentive (₹600 - ₹1400)",
+    "description": "Safe motherhood intervention to reduce maternal and neonatal mortality.",
+    "eligibility": {
+      "category": "Pregnant women (BPL/SC/ST)",
+      "location": "Public or accredited private health facilities"
+    },
+    "benefits": [
+      "Cash assistance for institutional delivery",
+      "Post-natal care and immunization support"
+    ],
+    "link": "https://nhm.gov.in"
+  },
+  {
+    "name": "Arogyasri (Dr. YSR Aarogyasri)",
     "type": "State",
-    "state": "Bihar",
-    "coverage": "Variable (Specific to disease)",
-    "description": "Financial assistance for serious illnesses like Cancer, Heart Disease, and Kidney failure.",
+    "state": "Andhra Pradesh",
+    "coverage": "₹25 Lakh per family per year",
+    "description": "Flagship health scheme of AP providing universal health coverage.",
     "eligibility": {
-      "income": "< ₹2.5 Lakh per year",
-      "residency": "Permanent resident of Bihar"
+      "income": "< ₹5 Lakh per year",
+      "residency": "Andhra Pradesh with Rice Card"
     },
     "benefits": [
-      "Grant for treatment in CGHS empaneled hospitals",
-      "Coverage for chronic surgeries",
-      "Applicable for hospitals outside the state in specific cases"
+      "Covers 3,255 procedures",
+      "Post-surgery follow-up and medicines included",
+      "Cashless treatment in network hospitals"
     ],
-    "link": "https://biharbhawan.gov.in"
+    "link": "https://aarogyasri.ap.gov.in"
   },
   {
-    "name": "Ayushman Bharat – Arogya Karnataka (AB-ArK)",
-    "type": "State/Integrated",
-    "state": "Karnataka",
-    "coverage": "₹5 Lakh (BPL) / ₹1.5 Lakh (APL co-pay)",
-    "description": "Integrated health scheme covering both BPL and APL families in Karnataka.",
+    "name": "Swasthya Sathi",
+    "type": "State",
+    "state": "West Bengal",
+    "coverage": "₹5 Lakh per family per year",
+    "description": "Smart card based cashless health insurance for all residents of West Bengal.",
     "eligibility": {
-      "BPL": "NFSA Ration Card holders",
-      "APL": "Karnataka residents (70:30 co-pay)"
+      "residency": "Permanent resident of West Bengal",
+      "Universal": "Yes (No income cap)"
     },
     "benefits": [
-      "Primary, secondary and tertiary care",
-      "Government referral system for private hospitals",
-      "Integrated with national PM-JAY database"
+      "Paperless, cashless, smart card based",
+      "Entire family covered including parents/in-laws",
+      "Coverage for all pre-existing diseases"
     ],
-    "link": "https://arogyakarnataka.karnataka.gov.in"
+    "link": "https://swasthyasathi.gov.in"
   },
   {
-    "name": "Mahatma Jyotirao Phule Jan Arogya Yojana (MJPJAY)",
+    "name": "Biju Swasthya Kalyan Yojana (BSKY)",
+    "type": "State",
+    "state": "Odisha",
+    "coverage": "₹5 Lakh (Men) / ₹10 Lakh (Women)",
+    "description": "Universal health coverage for families in Odisha.",
+    "eligibility": {
+      "residency": "Resident of Odisha",
+      "income": "NFSA/SFSA card holders"
+    },
+    "benefits": [
+      "Free healthcare in all State Govt facilities",
+      "Cashless treatment in 800+ empanelled private hospitals",
+      "Special higher coverage for women family members"
+    ],
+    "link": "https://bsky.odisha.gov.in"
+  },
+  {
+    "name": "Mukhyamantri Amrutam (MA Yojana)",
+    "type": "State",
+    "state": "Gujarat",
+    "coverage": "₹5 Lakh per family per year",
+    "description": "Tertiary care health scheme for BPL and lower middle-class families in Gujarat.",
+    "eligibility": {
+      "income": "< ₹4 Lakh per year",
+      "category": "BPL, Low Income"
+    },
+    "benefits": [
+      "Cashless treatment for 697+ procedures",
+      "Covers Heart, Kidney, Cancer, Brain injuries",
+      "Includes transportation charges (₹300 per visit)"
+    ],
+    "link": "https://magujarat.ncode.in"
+  },
+  {
+    "name": "Karunya Health Care Scheme (KASP)",
+    "type": "State",
+    "state": "Kerala",
+    "coverage": "₹5 Lakh per family per year",
+    "description": "Comprehensive health insurance scheme of Kerala integrated with PM-JAY.",
+    "eligibility": {
+      "residency": "Resident of Kerala",
+      "category": "BPL/Poor families"
+    },
+    "benefits": [
+      "Secondary and tertiary care hospitalization",
+      "Coverage in both public and empanelled private hospitals",
+      "Free medical services in government hospitals"
+    ],
+    "link": "https://sha.kerala.gov.in"
+  },
+  {
+    "name": "Deen Dayal Swasthya Seva Yojana (DDSSY)",
+    "type": "State",
+    "state": "Goa",
+    "coverage": "₹2.5 Lakh - ₹4 Lakh",
+    "description": "Universal health insurance for the people of Goa.",
+    "eligibility": {
+      "residency": "Resident of Goa (5+ years)",
+      "income": "All (with varying premiums)"
+    },
+    "benefits": [
+      "Covers 447+ procedures",
+      "Annual coverage for medicines and diagnostics",
+      "Cashless benefit at empanelled hospitals"
+    ],
+    "link": "https://www.ddssygoa.com"
+  },
+  {
+    "name": "Ayushman Uttarakhand (AB-UP)",
+    "type": "State",
+    "state": "Uttarakhand",
+    "coverage": "₹5 Lakh per family per year",
+    "description": "Universal health coverage for all residents of Uttarakhand.",
+    "eligibility": {
+      "residency": "All residents of Uttarakhand",
+      "Universal": "Yes"
+    },
+    "benefits": [
+      "Integrated with PM-JAY for national portability",
+      "Cashless treatment for 1,350+ procedures",
+      "Includes secondary and tertiary care"
+    ],
+    "link": "https://ayushmanuttarakhand.org"
+  },
+  {
+    "name": "Himcare Scheme",
+    "type": "State",
+    "state": "Himachal Pradesh",
+    "coverage": "₹5 Lakh per family per year",
+    "description": "Health insurance for families not covered under PM-JAY in Himachal Pradesh.",
+    "eligibility": {
+      "residency": "Resident of Himachal Pradesh",
+      "category": "Families not in PM-JAY"
+    },
+    "benefits": [
+      "Cashless treatment in empanelled hospitals",
+      "Covers up to 5 family members",
+      "Nominal premium for non-vulnerable categories"
+    ],
+    "link": "https://hpsha.in"
+  },
+  {
+    "name": "Rajiv Gandhi Jeevandayee Aarogya Yojana",
     "type": "State",
     "state": "Maharashtra",
-    "coverage": "₹1.5 Lakh - ₹5 Lakh",
-    "description": "Expanded universal health coverage for all residents of Maharashtra.",
+    "coverage": "₹1.5 Lakh",
+    "description": "Legacy health insurance scheme for poor families in Maharashtra, now part of MJPJAY.",
     "eligibility": {
-      "residency": "All residents of Maharashtra with valid ID",
-      "Universal": "As of July 2024, extended to all citizens"
+      "income": "Low income / BPL"
     },
     "benefits": [
-      "Cashless hospitalization for 996+ procedures",
-      "Specific high-cost treatments up to ₹2.5 Lakh (e.g. Kidney transplant)",
-      "Network of 1000+ public and private hospitals"
+      "Coverage for specialized surgeries",
+      "Cashless treatment in designated hospitals"
     ],
     "link": "https://www.jeevandayee.gov.in"
   },
   {
-    "name": "Tamil Nadu Chief Minister's Comprehensive Health Insurance Scheme",
+    "name": "Chief Minister's Health Insurance Scheme (CMHIS)",
     "type": "State",
-    "state": "Tamil Nadu",
+    "state": "Nagaland",
     "coverage": "₹5 Lakh per family per year",
-    "description": "Provides high-quality healthcare to low-income families in Tamil Nadu.",
+    "description": "State-funded universal health insurance scheme for Nagaland.",
     "eligibility": {
-      "income": "< ₹1.2 Lakh per year"
+      "residency": "Indigenous inhabitants of Nagaland"
     },
     "benefits": [
-      "Covers 1,027 procedures",
-      "Cashless treatment in empaneled hospitals",
-      "Specialized surgeries like Heart transplants and Cochlear implants"
+      "Cashless treatment for secondary and tertiary care",
+      "Portability across India in PM-JAY network",
+      "Covers government employees and pensioners"
     ],
-    "link": "https://www.cmchistn.com"
+    "link": "https://cmhis.nagaland.gov.in"
+  },
+  {
+    "name": "Aushman Bharat – Sarbat Sehat Bima Yojana",
+    "type": "State",
+    "state": "Punjab",
+    "coverage": "₹5 Lakh per family per year",
+    "description": "Integrated health insurance scheme for families in Punjab.",
+    "eligibility": {
+      "residency": "Resident of Punjab",
+      "category": "Farmers, Construction workers, Small traders"
+    },
+    "benefits": [
+      "Secondary and tertiary care coverage",
+      "Network of 800+ hospitals",
+      "Cashless treatment via smart card"
+    ],
+    "link": "https://sha.punjab.gov.in"
+  },
+  {
+    "name": "Rajasthan Mukhya Mantri Chiranjeevi Swasthya Bima Yojana",
+    "type": "State",
+    "state": "Rajasthan",
+    "coverage": "₹25 Lakh per family per year",
+    "description": "Massive universal health coverage scheme of Rajasthan.",
+    "eligibility": {
+      "residency": "Resident of Rajasthan",
+      "Universal": "Yes"
+    },
+    "benefits": [
+      "Highest coverage amount in India (₹25L)",
+      "Covers liver, heart, and bone marrow transplants",
+      "Includes ₹5 Lakh accident insurance"
+    ],
+    "link": "https://chiranjeevi.rajasthan.gov.in"
+  },
+  {
+    "name": "Janani Shishu Suraksha Karyakram (JSSK)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "Completely Free Service",
+    "description": "Entitlement to free and cashless services to pregnant women and sick newborns.",
+    "eligibility": {
+      "category": "All pregnant women and infants (up to 1 year)"
+    },
+    "benefits": [
+      "Free drugs, diagnostics, and diet during stay",
+      "Free transport from home to facility and back",
+      "Free blood transfusion if required"
+    ],
+    "link": "https://nhm.gov.in"
+  },
+  {
+    "name": "Rashtriya Bal Swasthya Karyakram (RBSK)",
+    "type": "Central",
+    "state": "National",
+    "coverage": "Free Treatment for 30 conditions",
+    "description": "Early identification and intervention for children from birth to 18 years.",
+    "eligibility": {
+      "age": "0-18 Years"
+    },
+    "benefits": [
+      "Screening for 4 Ds (Defects, Deficiencies, Diseases, Developmental delays)",
+      "Free surgical interventions (e.g. Cleft lip, Congenital heart disease)",
+      "Management via District Early Intervention Centres (DEIC)"
+    ],
+    "link": "https://nhm.gov.in"
   }
 ]

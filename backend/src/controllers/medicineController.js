@@ -10,73 +10,25 @@ export const searchMedicines = async (req, res, next) => {
       return res.json([]);
     }
 
-    // PEAK DEMO INTERCEPTOR: Instant high-fidelity results for demo videos
-    const demoMocks = {
-      "telma 40": [{
-        brandName: "Telma 40",
-        genericName: "Telmisartan",
-        salt: "Telmisartan (40mg)",
-        brandedPrice: 180,
-        dosage: "40mg",
-        category: "Hypertension",
-        genericAlternative: {
-          brandName: "PMBJP Telmisartan",
-          genericName: "Telmisartan",
-          janAushadhiPrice: 25,
-          savingsPercent: 86,
-          isAIValidated: true
-        }
-      }],
-      "lipitor": [{
-        brandName: "Lipitor",
-        genericName: "Atorvastatin",
-        salt: "Atorvastatin Calcium (10mg)",
-        brandedPrice: 450,
-        dosage: "10mg",
-        category: "Cholesterol",
-        genericAlternative: {
-          brandName: "PMBJP Atorvastatin",
-          genericName: "Atorvastatin",
-          janAushadhiPrice: 45,
-          savingsPercent: 90,
-          isAIValidated: true
-        }
-      }],
-      "augmentin": [{
-        brandName: "Augmentin 625",
-        genericName: "Amoxycillin + Clavulanic Acid",
-        salt: "Amoxycillin (500mg) + Clavulanic Acid (125mg)",
-        brandedPrice: 220,
-        dosage: "625mg",
-        category: "Antibiotic",
-        genericAlternative: {
-          brandName: "PMBJP Amoxy-Clav",
-          genericName: "Amoxycillin + Clavulanic Acid",
-          janAushadhiPrice: 65,
-          savingsPercent: 70,
-          isAIValidated: true
-        }
-      }]
-    };
-
-    const normalizedQuery = query.toLowerCase().trim();
-    if (demoMocks[normalizedQuery]) {
-      return res.json(demoMocks[normalizedQuery]);
-    }
-
-    // Search by brand name, generic name, or salt
+    const normalizedQuery = query.trim();
+    
+    // 1. Search Local Database using Text Search or partial match
     let medicines = await Medicine.find({
-      $text: { $search: query }
+      $or: [
+        { brandName: { $regex: normalizedQuery, $options: 'i' } },
+        { genericName: { $regex: normalizedQuery, $options: 'i' } },
+        { salt: { $regex: normalizedQuery, $options: 'i' } }
+      ]
     }).limit(20);
 
-    // PEAK UPGRADE: If no local DB match, trigger a Global AI Search
+    // 2. If no local matches, use AI to identify the medicine and find generic salt
     if (medicines.length === 0) {
       try {
         const globalSearchPrompt = `
-          The user is searching for a medicine: "${query}".
+          The user is searching for a medicine: "${normalizedQuery}".
           1. Identify the brand name.
           2. Find its primary generic salt/composition.
-          3. Estimate the branded market price in India.
+          3. Estimate the branded market price in India for a standard pack.
           4. Find the generic PMBJP (Jan Aushadhi) alternative and its price.
           5. Provide dosage information.
           
@@ -94,16 +46,37 @@ export const searchMedicines = async (req, res, next) => {
           }]
         `;
         
-        const aiResults = await getStructuredAIResponse(globalSearchPrompt, "You are a Global Pharmaceutical Intelligence Agent.");
-        return res.json(aiResults.map(res => ({ ...res, genericAlternative: res })));
+        const aiResults = await getStructuredAIResponse(globalSearchPrompt, "You are a Global Pharmaceutical Intelligence Agent specializing in India's Jan Aushadhi network.");
+        
+        const formattedResults = aiResults.map(res => ({
+          ...res,
+          genericAlternative: {
+            brandName: "PMBJP " + res.genericName,
+            genericName: res.genericName,
+            janAushadhiPrice: res.janAushadhiPrice,
+            savingsPercent: res.savingsPercent,
+            isAIValidated: true
+          }
+        }));
+        
+        return res.json(formattedResults);
       } catch (error) {
+        console.error('AI Medicine Search Error:', error);
         return res.json([]);
       }
     }
 
+    // 3. For each found medicine, ensure we have a generic alternative
     const results = await Promise.all(medicines.map(async (med) => {
-// ...
-      // Find generic counterpart by salt or generic name
+      // If the medicine itself is a Jan Aushadhi generic (has janAushadhiPrice in our data)
+      if (med.janAushadhiPrice && !med.brandedPrice) {
+         return {
+           ...med._doc,
+           genericAlternative: med
+         };
+      }
+
+      // If it's a branded medicine, find the generic version in our DB
       const genericVersion = await Medicine.findOne({
         $or: [
           { genericName: med.genericName, janAushadhiPrice: { $exists: true } },
@@ -115,7 +88,7 @@ export const searchMedicines = async (req, res, next) => {
         return { ...med._doc, genericAlternative: genericVersion };
       }
 
-      // PEAK FALLBACK: AI Search if no DB match
+      // If no generic in DB, use AI to find/estimate one
       try {
         const aiPrompt = `Find the generic PMBJP (Jan Aushadhi) alternative for ${med.brandName} (${med.genericName}). Estimate the PMBJP price for ${med.dosage}. Return JSON { genericName, salt, janAushadhiPrice, savingsPercent }.`;
         const aiSuggestion = await getStructuredAIResponse(aiPrompt, "You are a pharmaceutical bio-equivalence expert.");
@@ -128,11 +101,24 @@ export const searchMedicines = async (req, res, next) => {
           }
         };
       } catch {
-        return med;
+        return med._doc;
       }
     }));
 
     res.json(results);
+  } catch (error) {
+    next(error);
+  }
+};
+
+// @desc    Get top savings medicines
+// @route   GET /api/medicines/top-savings
+export const getTopSavings = async (req, res, next) => {
+  try {
+    const topMeds = await Medicine.find({ savingsPercent: { $exists: true } })
+      .sort({ savingsPercent: -1 })
+      .limit(10);
+    res.json(topMeds);
   } catch (error) {
     next(error);
   }

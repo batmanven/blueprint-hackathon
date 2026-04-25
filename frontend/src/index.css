@@ -95,4 +95,13 @@
   .chat-bubble-user {
     @apply bg-white border border-oat text-off-black p-5 rounded-[12px] rounded-tr-none text-[15px] leading-relaxed;
   }
+
+  /* Glassmorphism Utilities */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+  }
 }

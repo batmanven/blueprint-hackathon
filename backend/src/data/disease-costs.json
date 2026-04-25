@@ -1,0 +1,41 @@
+{
+  "cataract_surgery": {
+    "public": "₹0–5,000",
+    "private": "₹25,000–80,000",
+    "pmjay": "Fully covered",
+    "recovery": "1-2 weeks",
+    "annual_follow_up": "₹2,000"
+  },
+  "diabetes_type_2": {
+    "branded_monthly": "₹3,000–8,000",
+    "generic_monthly": "₹400–1,200",
+    "annual_checkups": "₹5,000–15,000",
+    "risks": ["Neuropathy", "Retinopathy"],
+    "management": "Long-term"
+  },
+  "heart_bypass_cabg": {
+    "public": "₹1.5–3L",
+    "private": "₹3–8L",
+    "pmjay": "Covered up to ₹5L",
+    "meds_monthly": "₹2,500",
+    "recovery": "3-6 months"
+  },
+  "cancer_chemotherapy": {
+    "per_cycle_generic": "₹8,000–25,000",
+    "per_cycle_branded": "₹50,000–2,00,000",
+    "full_course": "₹2.5–25L",
+    "pmjay": "Covered (Specific cycles)"
+  },
+  "kidney_dialysis": {
+    "per_session_private": "₹2,500–5,000",
+    "per_session_pmjay": "Free (National Dialysis Program)",
+    "monthly_cost": "₹20,000–40,000",
+    "transplant_cost": "₹5L–15L"
+  },
+  "maternity_delivery": {
+    "normal_private": "₹40,000–70,000",
+    "c_section_private": "₹80,000–1,50,000",
+    "jssk_public": "Free",
+    "post_natal_6mo": "₹15,000"
+  }
+}
