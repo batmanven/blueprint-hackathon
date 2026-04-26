@@ -21,7 +21,7 @@ const app = express();
 
 app.use(helmet());
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
@@ -40,9 +40,23 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'AarogyaRaksha API is running' });
 });
 
+app.get('/api/ping', (req, res) => {
+  res.status(200).send('pong');
+});
+
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  
+  // Keep-alive logic for Render free tier
+  const RENDER_EXTERNAL_URL = process.env.RENDER_EXTERNAL_URL;
+  if (RENDER_EXTERNAL_URL) {
+    setInterval(() => {
+      fetch(`${RENDER_EXTERNAL_URL}/api/ping`)
+        .then(() => console.log('Self-ping successful'))
+        .catch(err => console.error('Self-ping failed:', err));
+    }, 600000); // Ping every 10 minutes
+  }
 });
