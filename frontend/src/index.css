@@ -62,7 +62,14 @@
 
 @layer components {
   .layout-container {
-    @apply max-w-[1240px] mx-auto px-6 md:px-10 w-full;
+    @apply max-w-[1240px] mx-auto px-4 md:px-10 w-full;
+  }
+
+  /* Mobile-first responsive typography */
+  @media (max-width: 640px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
   }
 
   /* Intercom-style Buttons - Sharp, precise, industrial */

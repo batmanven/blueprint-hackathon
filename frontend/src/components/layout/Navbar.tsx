@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
 
 const Navbar = () => {
-  const { t } = useLanguage();
+  const { t, lang, setLang } = useLanguage();
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('aarogya-user') || 'null');
   const [open, setOpen] = useState(false);
@@ -33,6 +33,7 @@ const Navbar = () => {
     { label: t.nav.bills, path: '/bill-analysis' },
     { label: t.nav.meds, path: '/medicines' },
     { label: t.nav.plan, path: '/expenses' },
+    { label: t.nav.emergency, path: '/emergency' },
     { label: t.nav.impact, path: '/analytics' },
   ];
 
@@ -101,6 +102,12 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
+            <button
+              onClick={() => setLang(lang === 'en' ? 'hi' : 'en')}
+              className="hidden h-10 items-center rounded-xl border border-oat bg-white px-3 text-sm font-semibold text-off-black transition hover:border-fin/40 hover:bg-background sm:flex"
+            >
+              {lang === 'en' ? 'हिंदी' : 'EN'}
+            </button>
             {user ? (
               <>
                 <img

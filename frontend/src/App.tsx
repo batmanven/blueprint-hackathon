@@ -13,6 +13,7 @@ import ExpensePlannerPage from './pages/ExpensePlannerPage';
 import ExpenseResultPage from './pages/ExpenseResultPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import EmergencyFundPage from './pages/EmergencyFundPage';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import { LanguageProvider } from './lib/LanguageContext';
 
@@ -36,6 +37,7 @@ function App() {
                 <Route path="/medicines/result" element={<MedicineResultPage />} />
                 <Route path="/expenses" element={<ExpensePlannerPage />} />
                 <Route path="/expenses/result" element={<ExpenseResultPage />} />
+                <Route path="/emergency" element={<EmergencyFundPage />} />
                 <Route path="/analytics" element={<AnalyticsPage />} />
               </Route>
             </Routes>

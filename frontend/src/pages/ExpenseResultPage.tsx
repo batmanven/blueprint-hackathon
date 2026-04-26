@@ -11,7 +11,8 @@ import { CountUp } from '@/components/ui/CountUp';
 const ExpenseResultPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { results, formData } = (location.state as { results: any; formData: any }) || {};
+  const { results, formData, mode } = (location.state as { results: any; formData: any; mode?: string }) || {};
+  const isEmergencyMode = mode === 'emergency';
 
   useEffect(() => {
     if (!results) {
@@ -47,11 +48,11 @@ const ExpenseResultPage = () => {
               <Activity className="h-5 w-5 text-white" />
             </div>
             <p className="font-saans-mono text-[11px] font-bold text-fin uppercase tracking-[0.25em]">
-              Simulation Complete · Actuarial Confirmed
+              {isEmergencyMode ? 'Emergency Fund Calculator' : 'Simulation Complete · Actuarial Confirmed'}
             </p>
           </div>
           <h1 className="text-[54px] md:text-[72px] font-normal leading-[1.0] tracking-[-0.04em] text-off-black">
-            Financial Forecast
+            {isEmergencyMode ? 'Healthcare Shield Target' : 'Financial Forecast'}
           </h1>
           <p className="text-[18px] text-black/40 max-w-xl font-normal">
             Based on your medical history and local inflation indices, here is your 12-month healthcare capital requirement.
@@ -70,12 +71,16 @@ const ExpenseResultPage = () => {
               <Wallet className="h-6 w-6 text-fin" />
             </div>
             <div className="space-y-2">
-              <p className="font-saans-mono text-[11px] font-bold text-black/30 uppercase tracking-[0.2em]">Annual Burn Rate</p>
+              <p className="font-saans-mono text-[11px] font-bold text-black/30 uppercase tracking-[0.2em]">
+                {isEmergencyMode ? 'Recommended Shield' : 'Annual Burn Rate'}
+              </p>
               <div className="text-[48px] font-normal text-off-black tracking-tighter leading-none">
-                <CountUp end={results.estimatedAnnualCost} prefix="₹" />
+                <CountUp end={results.recommendedFund || results.estimatedAnnualCost} prefix="₹" />
               </div>
             </div>
-            <p className="text-[14px] text-black/40 leading-relaxed">Projected recurring cost for medicines & consultations.</p>
+            <p className="text-[14px] text-black/40 leading-relaxed">
+              {isEmergencyMode ? 'Your healthcare financial safety net target' : 'Projected recurring cost for medicines & consultations.'}
+            </p>
           </motion.div>
 
           <motion.div 
@@ -91,12 +96,14 @@ const ExpenseResultPage = () => {
               <Landmark className="h-6 w-6 text-white" />
             </div>
             <div className="space-y-2 relative z-10">
-              <p className="font-saans-mono text-[11px] font-bold text-white/40 uppercase tracking-[0.2em]">Shield Buffer Target</p>
+              <p className="font-saans-mono text-[11px] font-bold text-white/40 uppercase tracking-[0.2em]">Monthly Savings</p>
               <div className="text-[48px] font-normal text-fin tracking-tighter leading-none">
-                <CountUp end={results.recommendedEmergencyFund} prefix="₹" />
+                <CountUp end={results.monthlySavings || 0} prefix="₹" />
               </div>
             </div>
-            <p className="text-white/60 text-[14px] leading-relaxed relative z-10 italic">Recommended liquid reserve for critical health events.</p>
+            <p className="text-white/60 text-[14px] leading-relaxed relative z-10 italic">
+              {isEmergencyMode ? 'Amount to save monthly for 3 years' : 'Recommended liquid reserve for critical health events.'}
+            </p>
           </motion.div>
 
           <motion.div 
@@ -109,12 +116,12 @@ const ExpenseResultPage = () => {
               <TrendingDown className={`h-6 w-6 ${results.riskLevel === 'High' ? 'text-fin' : 'text-off-black'}`} />
             </div>
             <div className="space-y-2">
-              <p className="font-saans-mono text-[11px] font-bold text-black/30 uppercase tracking-[0.2em]">Actuarial Risk</p>
+              <p className="font-saans-mono text-[11px] font-bold text-black/30 uppercase tracking-[0.2em]">Risk Score</p>
               <div className={`text-[48px] font-normal tracking-tighter leading-none ${results.riskLevel === 'High' ? 'text-fin' : 'text-off-black'}`}>
-                {results.riskLevel}
+                {results.riskScore || results.riskLevel}
               </div>
             </div>
-            <p className="text-[14px] text-black/40 leading-relaxed">Scenario-based health risk probability assessment.</p>
+            <p className="text-[14px] text-black/40 leading-relaxed">Health risk probability based on your profile.</p>
           </motion.div>
         </div>
 

@@ -14,12 +14,55 @@ import { AnimatePresence } from 'framer-motion';
 
 const BillAnalysisPage = () => {
   const { t } = useLanguage();
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [showAuditGateway, setShowAuditGateway] = useState(false);
   const [pendingResults, setPendingResults] = useState<any>(null);
   const [results, setResults] = useState<any>(null);
+  
+  const demoBills = [
+    { name: "Fortis Hospital Delhi", amount: 85000, id: "demo-fortis" },
+    { name: "Apollo Chennai", amount: 125000, id: "demo-apollo" },
+    { name: "Max Healthcare Gurgaon", amount: 62000, id: "demo-max" }
+  ];
+
+  const loadDemoBill = (demo) => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 400;
+    canvas.height = 600;
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, 400, 600);
+      ctx.fillStyle = '#111827';
+      ctx.font = 'bold 24px Georgia';
+      ctx.fillText(demo.name, 20, 50);
+      ctx.font = '16px Arial';
+      ctx.fillText("Invoice Date: " + new Date().toLocaleDateString(), 20, 80);
+      ctx.fillText("--- HOSPITAL CHARGES ---", 20, 120);
+      ctx.fillText("Room Rent (3 days)          ₹18,000", 20, 160);
+      ctx.fillText("Surgeon Fee               ₹25,000", 20, 190);
+      ctx.fillText("Medicines                ₹22,000", 20, 220);
+      ctx.fillText("IV Set (5)               ₹4,500", 20, 250);
+      ctx.fillText("Surgical Gloves (10)      ₹3,500", 20, 280);
+      ctx.fillText("Blood Tests               ₹3,200", 20, 310);
+      ctx.fillText("MRI Scan                ₹8,000", 20, 340);
+      ctx.fillText("--------------------------", 20, 380);
+      ctx.font = 'bold 20px Georgia';
+      ctx.fillText("TOTAL: ₹" + demo.amount.toLocaleString(), 20, 420);
+      ctx.fillStyle = '#ef4444';
+      ctx.font = '14px Arial';
+      ctx.fillText("* Overcharged on consumables", 20, 480);
+    }
+    canvas.toBlob((blob) => {
+      if (blob) {
+        const demoFile = new File([blob], `${demo.id}.png`, { type: 'image/png' });
+        setFile(demoFile);
+        setPreview(canvas.toDataURL());
+      }
+    });
+  };
 
   const onFileChange = (e) => {
     const selectedFile = e.target.files[0];
@@ -129,6 +172,17 @@ const BillAnalysisPage = () => {
             className="bg-white border border-oat rounded-[8px] overflow-hidden shadow-sm"
           >
             <div className="p-16 flex flex-col items-center justify-center space-y-10 border-b border-oat bg-[#faf9f6]/40">
+              <div className="flex gap-3 mb-4 flex-wrap justify-center">
+                {demoBills.map((demo) => (
+                  <button
+                    key={demo.id}
+                    onClick={() => loadDemoBill(demo)}
+                    className="px-4 py-2 text-xs font-bold uppercase tracking-wider border border-oat rounded-full hover:border-fin hover:bg-fin hover:text-white transition-all"
+                  >
+                    Load {demo.name}
+                  </button>
+                ))}
+              </div>
               {preview ? (
                 <div className="relative group">
                   <img src={preview} alt="Bill Preview" className="max-h-[400px] rounded-[4px] shadow-2xl border border-off-black" />
