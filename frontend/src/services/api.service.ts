@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
 import type { Scheme, Medicine, BillAnalysis, ExpensePlan } from '../types';
 
@@ -61,6 +62,17 @@ export const expenseService = {
     const { data } = await api.post<ExpensePlan>('/expenses/plan', { profile, history });
     return data;
   },
+};
+
+export const emergencyService = {
+  calculateShieldFund: async (formData: any) => {
+    const { data } = await api.post('/emergency/calculate', formData);
+    return data;
+  },
+  getImpact: async () => {
+    const { data } = await api.get('/emergency/impact');
+    return data;
+  }
 };
 
 export default api;
