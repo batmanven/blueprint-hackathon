@@ -33,7 +33,7 @@ export const getStructuredAIResponse = async (prompt, systemInstruction, modelNa
 export const analyzeImageWithGemini = async (prompt, imageBuffer, mimeType = 'image/jpeg', systemInstruction = "") => {
   try {
     const response = await getClient().models.generateContent({
-      model: 'gemini-2.0-flash',
+      model: 'gemini-flash-latest',
       systemInstruction: systemInstruction,
       contents: [
         {

@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useLocation, useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useEffect } from 'react';
-import { 
-  CheckCircle2, ArrowLeft, Sparkles, ExternalLink, 
+import {
+  CheckCircle2, ArrowLeft, Sparkles,
   PieChart, ShieldAlert, ArrowUpRight, TrendingDown,
   Activity, Wallet, Landmark
 } from 'lucide-react';
@@ -11,7 +12,7 @@ import { CountUp } from '@/components/ui/CountUp';
 const ExpenseResultPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { results, formData, mode } = (location.state as { results: any; formData: any; mode?: string }) || {};
+  const { results, mode } = (location.state as { results: any; formData: any; mode?: string }) || {};
   const isEmergencyMode = mode === 'emergency';
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const ExpenseResultPage = () => {
   return (
     <div className="bg-[#faf9f6] min-h-screen py-32">
       <div className="max-w-5xl mx-auto px-6 space-y-16">
-        
+
         {/* Back */}
         <motion.button
           initial={{ opacity: 0, x: -12 }}
@@ -61,7 +62,7 @@ const ExpenseResultPage = () => {
 
         {/* Key Metrics Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -83,7 +84,7 @@ const ExpenseResultPage = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -106,7 +107,7 @@ const ExpenseResultPage = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -127,7 +128,7 @@ const ExpenseResultPage = () => {
 
         {/* Detailed Breakdown */}
         <div className="grid md:grid-cols-3 gap-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -139,7 +140,7 @@ const ExpenseResultPage = () => {
               </h3>
             </div>
             <div className="space-y-10">
-              {results.costBreakdown.map((item, i) => (
+              {results.costBreakdown.map((item: any, i: number) => (
                 <div key={i} className="flex justify-between items-start gap-10 group">
                   <div className="space-y-2 flex-1">
                     <div className="flex items-center gap-4">
@@ -159,7 +160,7 @@ const ExpenseResultPage = () => {
           </motion.div>
 
           {/* AI Recommendation Sidebar */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -177,7 +178,7 @@ const ExpenseResultPage = () => {
                 Optimize My Shield
               </button>
             </div>
-            
+
             <div className="bg-white border border-oat rounded-[24px] p-10 space-y-8 shadow-sm">
               <h4 className="font-saans-mono text-[12px] font-bold text-off-black uppercase tracking-widest flex items-center gap-2">
                 <ShieldAlert size={16} /> Data Integrity

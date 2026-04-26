@@ -17,7 +17,7 @@ export const getChatResponse = async (req, res, next) => {
     const { message } = req.body;
 
     const response = await getClient().models.generateContent({
-      model: 'gemini-2.0-flash',
+      model: 'gemini-flash-latest',
       systemInstruction: CHAT_ASSISTANT_PROMPT,
       contents: [{ role: 'user', parts: [{ text: message }] }]
     });
@@ -40,7 +40,7 @@ export const streamChat = async (req, res, next) => {
     }));
 
     const chat = getClient().chats.create({
-      model: 'gemini-2.0-flash',
+      model: 'gemini-flash-latest',
       config: {
         systemInstruction: CHAT_ASSISTANT_PROMPT
       },
