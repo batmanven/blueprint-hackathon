@@ -35,22 +35,26 @@ const EmergencyFundPage = () => {
   const handleCalculate = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 1800));
     
     const incomeMonthly = parseInt(formData.income.replace(/,/g, '')) || 50000;
     const familySize = parseInt(formData.familySize) || 4;
     const age = parseInt(formData.age) || 35;
+    const hasConditions = formData.conditions && formData.conditions.length > 0;
     
-    const baseMultiplier = age > 50 ? 3.5 : age > 35 ? 3 : 2.5;
-    const familyMultiplier = familySize > 4 ? 1.3 : familySize > 2 ? 1.1 : 1;
-    const recommendedFund = Math.round(incomeMonthly * 12 * baseMultiplier * familyMultiplier);
+    const ageRisk = age > 60 ? 3.5 : age > 50 ? 3 : age > 40 ? 2.5 : age > 35 ? 2 : 1.5;
+    const familyRisk = familySize > 5 ? 1.4 : familySize > 3 ? 1.2 : 1.0;
+    const conditionRisk = hasConditions ? 1.8 : 1.0;
+    const insuranceGap = formData.insurance === 'none' ? 1.5 : formData.insurance === 'government' ? 1.2 : 1.0;
+    
+    const baseMultiplier = ageRisk * familyRisk * conditionRisk * insuranceGap;
+    const recommendedFund = Math.round(incomeMonthly * 12 * baseMultiplier);
     const monthlySavings = Math.round(recommendedFund / 36);
-    const riskScore = age > 50 || formData.conditions ? 75 : age > 35 ? 55 : 35;
+    const riskScore = Math.round(((ageRisk - 1.5) * 25 + (familySize - 1) * 10 + (hasConditions ? 20 : 0) + (formData.insurance === 'none' ? 15 : 0)));
     
     const mockResult = {
       recommendedFund,
       monthlySavings,
-      riskScore,
+      riskScore: Math.min(riskScore, 100),
       riskLevel: riskScore > 60 ? 'High' : riskScore > 40 ? 'Medium' : 'Low',
       breakdown: {
         hospitalization: Math.round(recommendedFund * 0.5),
@@ -62,9 +66,11 @@ const EmergencyFundPage = () => {
         { name: 'PM-JAY', coverage: '₹5,00,000', eligible: true },
         { name: 'Ayushman Card', coverage: '₹5,00,000', eligible: formData.income && parseInt(formData.income.replace(/,/g, '')) < 250000 }
       ].filter(s => s.eligible),
-      advice: formData.conditions 
+      advice: hasConditions 
         ? "With your pre-existing conditions, prioritize comprehensive insurance with OPD cover. Consider building a larger buffer."
-        : "Your profile suggests a moderate risk. Start with a ₹3L emergency fund and increase as your income grows."
+        : insuranceGap > 1.2 
+        ? "You have insurance gap. Consider either adding employer coverage or buying personal health insurance."
+        : "Your profile suggests a moderate risk. Start with a ₹" + (recommendedFund/100000).toFixed(1) + "L emergency fund and increase as your income grows."
     };
     
     setPendingResults(mockResult);

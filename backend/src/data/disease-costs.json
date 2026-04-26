@@ -1,41 +1,1042 @@
 {
-  "cataract_surgery": {
-    "public": "₹0–5,000",
-    "private": "₹25,000–80,000",
-    "pmjay": "Fully covered",
-    "recovery": "1-2 weeks",
-    "annual_follow_up": "₹2,000"
+  "metadata": {
+    "source": "National Health Authority, NSS 2023-24, AIIMS Cost Data",
+    "description": "Comprehensive disease treatment cost profiles for India",
+    "lastUpdated": "2024",
+    "currency": "INR"
   },
-  "diabetes_type_2": {
-    "branded_monthly": "₹3,000–8,000",
-    "generic_monthly": "₹400–1,200",
-    "annual_checkups": "₹5,000–15,000",
-    "risks": ["Neuropathy", "Retinopathy"],
-    "management": "Long-term"
+  "treatments": [
+    {
+      "condition": "Cataract Surgery",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 2500,
+        "notes": "Government hospital, Ayushman/BSKY covered"
+      },
+      "privateHospital": {
+        "cost": 45000,
+        "notes": "Premium hospital, phacoemulsification with premium IOL"
+      },
+      "medianHospital": {
+        "cost": 25000,
+        "notes": "Mid-segment hospital, SICS technique"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100%"},
+        {"scheme": "Rashtriya Netra Jyoti", "coverage": "Free"},
+        {"scheme": "State schemes", "coverage": "Most states"}
+      ],
+      "costBreakdown": {
+        "surgeon": 8000,
+        "anesthesia": 3000,
+        "IOL": 5000,
+        "OT": 5000,
+        "consumables": 5000,
+        "ward": 2000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "4-6 weeks",
+      "surgeryDuration": "30-45 minutes"
+    },
+    {
+      "condition": "C-Section Delivery",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 5000,
+        "notes": "Government hospital, free under JSY"
+      },
+      "privateHospital": {
+        "cost": 120000,
+        "notes": "Premium hospital with NICU"
+      },
+      "medianHospital": {
+        "cost": 55000,
+        "notes": "Mid-segment corporate hospital"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100% if eligible"},
+        {"scheme": "JSY", "cash": "₹1400-2200"},
+        {"scheme": "Janani Suraksha", "coverage": "All institutional deliveries"}
+      ],
+      "costBreakdown": {
+        "surgeon": 20000,
+        "anesthesia": 8000,
+        "OT": 12000,
+        "consumables": 8000,
+        "ward": 4000,
+        "babyCare": 3000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "6 weeks",
+      "surgeryDuration": "45-60 minutes"
+    },
+    {
+      "condition": "Natural Delivery",
+      "type": "Normal",
+      "publicHospital": {
+        "cost": 0,
+        "notes": "Free in government hospitals"
+      },
+      "privateHospital": {
+        "cost": 45000,
+        "notes": "Premium hospital, normal delivery package"
+      },
+      "medianHospital": {
+        "cost": 25000,
+        "notes": "Mid-segment hospital"
+      },
+      "governmentSchemes": [
+        {"scheme": "JSY", "cash": "₹1400"},
+        {"scheme": "PM-JAY", "coverage": "Complications only"}
+      ],
+      "costBreakdown": {
+        "obstetrician": 8000,
+        "nursing": 3000,
+        "consumables": 5000,
+        "ward": 2000,
+        "babyCare": 2000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "2-3 days inpatient"
+    },
+    {
+      "condition": "Total Knee Replacement (One Knee)",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 80000,
+        "notes": "AIIMS/Government hospital, waiting period"
+      },
+      "privateHospital": {
+        "cost": 350000,
+        "notes": "Premium hospital, imported implant"
+      },
+      "medianHospital": {
+        "cost": 170000,
+        "notes": "Mid-segment hospital, Indian implant"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "₹5L coverage"},
+        {"scheme": "CGHS", "rate": "₹90,000"}
+      ],
+      "costBreakdown": {
+        "surgeon": 50000,
+        "implant": 80000,
+        "OT": 25000,
+        "anesthesia": 8000,
+        "consumables": 5000,
+        "rehabilitation": 2000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "3-6 months for full mobility",
+      "surgeryDuration": "1-2 hours"
+    },
+    {
+      "condition": "Total Hip Replacement",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 90000,
+        "notes": "AIIMS/Government hospital"
+      },
+      "privateHospital": {
+        "cost": 400000,
+        "notes": "Premium hospital"
+      },
+      "medianHospital": {
+        "cost": 200000,
+        "notes": "Mid-segment hospital"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "₹5L"},
+        {"scheme": "CGHS", "rate": "₹1,10,000"}
+      ],
+      "costBreakdown": {
+        "surgeon": 60000,
+        "implant": 90000,
+        "OT": 30000,
+        "anesthesia": 10000,
+        "consumables": 6000,
+        "rehabilitation": 4000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "3-6 months",
+      "surgeryDuration": "1.5-2 hours"
+    },
+    {
+      "condition": "CABG (Bypass Surgery)",
+      "type": "Cardiac Surgery",
+      "publicHospital": {
+        "cost": 120000,
+        "notes": "AIIMS, SCTIMST (premium government)"
+      },
+      "privateHospital": {
+        "cost": 500000,
+        "notes": "Premium cardiac hospital"
+      },
+      "medianHospital": {
+        "cost": 250000,
+        "notes": "Mid-segment cardiac center"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "₹5L"},
+        {"scheme": "CGHS", "rate": "₹1,50,000"},
+        {"scheme": "Rashtriya Arogya Nidhi", "upTo": "₹15,00,000"}
+      ],
+      "costBreakdown": {
+        "surgeon": 80000,
+        "OT": 80000,
+        "consumables": 45000,
+        "implants": 20000,
+        "anesthesia": 15000,
+        "ICU": 10000,
+        "postOpCare": 20000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "2-3 months",
+      "surgeryDuration": "3-5 hours"
+    },
+    {
+      "condition": "Coronary Angiography",
+      "type": "Cardiac Procedure",
+      "publicHospital": {
+        "cost": 2500,
+        "notes": "Government hospital"
+      },
+      "privateHospital": {
+        "cost": 25000,
+        "notes": "Diagnostic cath lab"
+      },
+      "medianHospital": {
+        "cost": 12000,
+        "notes": "Mid-segment"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100%"},
+        {"scheme": "CGHS", "rate": "₹3,000"}
+      ],
+      "costBreakdown": {
+        "procedure": 8000,
+        "consumables": 3000,
+        "cathLab": 15000,
+        "misc": 1500
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "Same day or 1 day",
+      "surgeryDuration": "30 minutes"
+    },
+    {
+      "condition": "Angioplasty (One Stent)",
+      "type": "Cardiac Procedure",
+      "publicHospital": {
+        "cost": 45000,
+        "notes": "With Indian stent"
+      },
+      "privateHospital": {
+        "cost": 250000,
+        "notes": "Imported stent"
+      },
+      "medianHospital": {
+        "cost": 120000,
+        "notes": "Indian stent"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "₹5L"},
+        {"scheme": "CGHS", "rate": "₹75,000"}
+      ],
+      "costBreakdown": {
+        "procedure": 25000,
+        "stent": 50000,
+        "consumables": 20000,
+        "cathLab": 20000,
+        "misc": 5000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "2-3 days",
+      "surgeryDuration": "1 hour"
+    },
+    {
+      "condition": "Appendectomy (Laparoscopic)",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 15000,
+        "notes": "Government hospital"
+      },
+      "privateHospital": {
+        "cost": 85000,
+        "notes": "Corporate hospital"
+      },
+      "medianHospital": {
+        "cost": 45000,
+        "notes": "Mid-segment"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100%"}
+      ],
+      "costBreakdown": {
+        "surgeon": 15000,
+        "anesthesia": 8000,
+        "OT": 12000,
+        "consumables": 6000,
+        "misc": 4000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "1-2 weeks",
+      "surgeryDuration": "45-60 minutes"
+    },
+    {
+      "condition": "Cholecystectomy (Laparoscopic)",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 18000,
+        "notes": "Government hospital"
+      },
+      "privateHospital": {
+        "cost": 120000,
+        "notes": "Premium hospital"
+      },
+      "medianHospital": {
+        "cost": 55000,
+        "notes": "Mid-segment"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100%"}
+      ],
+      "costBreakdown": {
+        "surgeon": 18000,
+        "anesthesia": 10000,
+        "OT": 15000,
+        "consumables": 8000,
+        "misc": 4000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "1-2 weeks",
+      "surgeryDuration": "1-2 hours"
+    },
+    {
+      "condition": "Hernia Repair (Inguinal)",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 12000,
+        "notes": "With mesh"
+      },
+      "privateHospital": {
+        "cost": 75000,
+        "notes": "With mesh"
+      },
+      "medianHospital": {
+        "cost": 35000,
+        "notes": "With mesh"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100%"}
+      ],
+      "costBreakdown": {
+        "surgeon": 12000,
+        "anesthesia": 5000,
+        "OT": 8000,
+        "mesh": 6000,
+        "misc": 4000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "2-3 weeks",
+      "surgeryDuration": "45-60 minutes"
+    },
+    {
+      "condition": "Dialysis (Per Session)",
+      "type": "Chronic",
+      "publicHospital": {
+        "cost": 800,
+        "notes": "Government hospital,free"
+      },
+      "privateHospital": {
+        "cost": 3500,
+        "notes": "Corporate dialyzer"
+      },
+      "medianHospital": {
+        "cost": 2000,
+        "notes": "Mid-segment"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "2 sessions/month"},
+        {"scheme": "National Dialysis Programme", "free": "Government centers"},
+        {"scheme": "Nikshay", "₹500/month": "TB patients"}
+      ],
+      "costPerYear": {
+        "public": 9600,
+        "private": 420000,
+        "median": 240000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "Chronic - ongoing",
+      "frequency": "2-3 sessions/week",
+      "transplantCost": "₹8-15L including 1 year immunosuppression"
+    },
+    {
+      "condition": "Chemotherapy (One Cycle)",
+      "type": "Oncology",
+      "publicHospital": {
+        "cost": 5000,
+        "notes": "Generic drugs"
+      },
+      "privateHospital": {
+        "cost": 150000,
+        "notes": "Branded protocols"
+      },
+      "medianHospital": {
+        "cost": 45000,
+        "notes": "Generic-based"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "Cancer covered"},
+        {"scheme": "Rashtriya Arogya Nidhi", "upTo": "₹15,00,000"},
+        {"scheme": "State Cancer Centres", "free": "State-specific"}
+      ],
+      "costPerYear": {
+        "public": 60000,
+        "private": 1800000,
+        "median": 540000
+      },
+      "averageSavingsWithJanAushadhi": "Can save 60-80% on supportive medicines",
+      "cycles": "6-8 cycles typical"
+    },
+    {
+      "condition": "Radiation Therapy",
+      "type": "Oncology",
+      "publicHospital": {
+        "cost": 25000,
+        "notes": "Conventional"
+      },
+      "privateHospital": {
+        "cost": 250000,
+        "notes": "IMRT/IGRT"
+      },
+      "medianHospital": {
+        "cost": 120000,
+        "notes": "3D-CRT"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "Radiation covered"}
+      ],
+      "sessions": "25-35 typically",
+      "costPerSession": {
+        "public": 1000,
+        "private": 8000,
+        "median": 4000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "Ongoing monitoring"
+    },
+    {
+      "condition": "Diabetes (Annual Management)",
+      "type": "Chronic",
+      "publicHospital": {
+        "cost": 5000,
+        "notes": "Generic medicines + basic tests"
+      },
+      "privateHospital": {
+        "cost": 60000,
+        "notes": "Best care + all tests"
+      },
+      "medianHospital": {
+        "cost": 25000,
+        "notes": "Good diabetes care"
+      },
+      "governmentSchemes": [
+        {"scheme": "NPCDCS", "free": "Medicines at PHC"},
+        {"scheme": "PM-JAY", "coverage": "Complications"}
+      ],
+      "costPerYear": {
+        "medicines": 20000,
+        "tests": 5000,
+        "consultations": 5000,
+        "misc": 3000
+      },
+      "averageSavingsWithJanAushadhi": "60-80% on medicines",
+      "medicineSavings": {
+        "brandedMonthly": "₹3000-8000",
+        "janAushadhiMonthly": "₹400-1200",
+        "annualSavings": "₹31200-81600"
+      }
+    },
+    {
+      "condition": "Hypertension (Annual)",
+      "type": "Chronic",
+      "publicHospital": {
+        "cost": 3000,
+        "notes": "Generic medicines"
+      },
+      "privateHospital": {
+        "cost": 35000,
+        "notes": "Premium care"
+      },
+      "medianHospital": {
+        "cost": 15000,
+        "notes": "Standard care"
+      },
+      "governmentSchemes": [
+        {"scheme": "NPCDCS", "free": "Medicines at PHC"}
+      ],
+      "costPerYear": {
+        "medicines": 8000,
+        "tests": 2000,
+        "consultations": 3000,
+        "misc": 2000
+      },
+      "averageSavingsWithJanAushadhi": "60-80% on medicines"
+    },
+    {
+      "condition": "Thyroid Disorder (Annual)",
+      "type": "Chronic",
+      "publicHospital": {
+        "cost": 2500,
+        "notes": "Generic thyroxine"
+      },
+      "privateHospital": {
+        "cost": 25000,
+        "notes": "Full thyroid care"
+      },
+      "medianHospital": {
+        "cost": 12000,
+        "notes": "Standard care"
+      },
+      "costPerYear": {
+        "medicines": 3000,
+        "tests": 5000,
+        "consultations": 3000,
+        "misc": 1000
+      },
+      "averageSavingsWithJanAushadhi": "40-60% on medicines"
+    },
+    {
+      "condition": "Asthma (Annual)",
+      "type": "Chronic",
+      "publicHospital": {
+        "cost": 6000,
+        "notes": "Preventer + reliever"
+      },
+      "privateHospital": {
+        "cost": 50000,
+        "notes": "Best inhaler therapy"
+      },
+      "medianHospital": {
+        "cost": 25000,
+        "notes": "Standard care"
+      },
+      "costPerYear": {
+        "inhalers": 18000,
+        "tests": 4000,
+        "consultations": 3000,
+        "misc": 2000
+      },
+      "averageSavingsWithJanAushadhi": "30-50% on inhalers"
+    },
+    {
+      "condition": "Epilepsy (Annual)",
+      "type": "Chronic",
+      "publicHospital": {
+        "cost": 6000,
+        "notes": "Generic AEDs"
+      },
+      "privateHospital": {
+        "cost": 60000,
+        "notes": "Best care"
+      },
+      "medianHospital": {
+        "cost": 30000,
+        "notes": "Standard care"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "If hospitalized"}
+      ],
+      "costPerYear": {
+        "medicines": 18000,
+        "tests": 8000,
+        "consultations": 4000,
+        "misc": 2000
+      },
+      "averageSavingsWithJanAushadhi": "50-70% on medicines"
+    },
+    {
+      "condition": "Mental Health (Annual)",
+      "type": "Chronic",
+      "publicHospital": {
+        "cost": 8000,
+        "notes": " govt mental health institute"
+      },
+      "privateHospital": {
+        "cost": 180000,
+        "notes": "Psychiatrist + therapy"
+      },
+      "medianHospital": {
+        "cost": 60000,
+        "notes": "Standard care"
+      },
+      "governmentSchemes": [
+        {"scheme": "NMHP", "free": "District mental health programme"}
+      ],
+      "costPerYear": {
+        "medicines": 24000,
+        "therapy": 20000,
+        "tests": 8000,
+        "consultations": 8000
+      },
+      "averageSavingsWithJanAushadhi": "40-60% on medicines"
+    },
+    {
+      "condition": "Parkinson's Disease (Annual)",
+      "type": "Chronic",
+      "publicHospital": {
+        "cost": 18000,
+        "notes": "Generic medicines"
+      },
+      "privateHospital": {
+        "cost": 250000,
+        "notes": "Comprehensive care"
+      },
+      "medianHospital": {
+        "cost": 85000,
+        "notes": "Standard care"
+      },
+      "costPerYear": {
+        "medicines": 72000,
+        "tests": 15000,
+        "consultations": 8000,
+        "therapy": 10000
+      },
+      "averageSavingsWithJanAushadhi": "50-70% on medicines"
+    },
+    {
+      "condition": "Stroke (Acute Care)",
+      "type": "Emergency",
+      "publicHospital": {
+        "cost": 50000,
+        "notes": "Conservative management"
+      },
+      "privateHospital": {
+        "cost": 500000,
+        "notes": "With thrombolysis/rehab"
+      },
+      "medianHospital": {
+        "cost": 200000,
+        "notes": "Standard acute care"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "₹5L"},
+        {"scheme": "CGHS", "rate": "₹1,00,000"}
+      ],
+      "costBreakdown": {
+        "acuteCare": 100000,
+        "ICU": 50000,
+        "imaging": 25000,
+        "medications": 20000,
+        "rehabilitation": 25000
+      },
+      "averageSavingsWithJanAushadhi": 0,
+      "recovery": "6-12 months rehabilitation",
+      "yearlyPostCare": "₹50,000-1,50,000"
+    },
+    {
+      "condition": "Accident/Trauma (Average)",
+      "type": "Emergency",
+      "publicHospital": {
+        "cost": 25000,
+        "notes": "Basic trauma care"
+      },
+      "privateHospital": {
+        "cost": 200000,
+        "notes": "Major trauma"
+      },
+      "medianHospital": {
+        "cost": 85000,
+        "notes": "Standard trauma"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "₹5L"},
+        {"scheme": "State Accident Claims", "varies": "State-specific"}
+      ],
+      "costPerYear": "Follow-up ₹10,000-50,000",
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "Pneumonia (Adult)",
+      "type": "Infectious",
+      "publicHospital": {
+        "cost": 5000,
+        "notes": "5-7 days admission"
+      },
+      "privateHospital": {
+        "cost": 75000,
+        "notes": "Premium care"
+      },
+      "medianHospital": {
+        "cost": 35000,
+        "notes": "Standard care"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "If severe"}
+      ],
+      "hospitalStay": "5-10 days",
+      "averageSavingsWithJanAushadhi": "30-50% on antibiotics"
+    },
+    {
+      "condition": "Dengue Fever",
+      "type": "Infectious",
+      "publicHospital": {
+        "cost": 8000,
+        "notes": "5-7 days admission"
+      },
+      "privateHospital": {
+        "cost": 120000,
+        "notes": "With platelet monitoring"
+      },
+      "medianHospital": {
+        "cost": 45000,
+        "notes": "Standard care"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "If severe complications"}
+      ],
+      "hospitalStay": "5-14 days",
+      "averageSavingsWithJanAushadhi": "30-50% on supportive care"
+    },
+    {
+      "condition": "COVID-19 (Moderate)",
+      "type": "Infectious",
+      "publicHospital": {
+        "cost": 10000,
+        "notes": "Government covid center"
+      },
+      "privateHospital": {
+        "cost": 200000,
+        "notes": "ICU + ventilation"
+      },
+      "medianHospital": {
+        "cost": 85000,
+        "notes": "Oxygen support"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "COVID covered"},
+        {"scheme": "State COVID Fund", "varies": "State-specific"}
+      ],
+      "hospitalStay": "10-21 days",
+      "averageSavingsWithJanAushadhi": "20-40% on medicines"
+    },
+    {
+      "condition": "Typhoid",
+      "type": "Infectious",
+      "publicHospital": {
+        "cost": 3000,
+        "notes": "Outpatient + admission"
+      },
+      "privateHospital": {
+        "cost": 35000,
+        "notes": "Full workup"
+      },
+      "medianHospital": {
+        "cost": 15000,
+        "notes": "Standard care"
+      },
+      "hospitalStay": "7-14 days",
+      "averageSavingsWithJanAushadhi": "40-60% on antibiotics"
+    },
+    {
+      "condition": "Viral Fever",
+      "type": "Infectious",
+      "publicHospital": {
+        "cost": 2000,
+        "notes": "Outpatient"
+      },
+      "privateHospital": {
+        "cost": 25000,
+        "notes": "Full workup"
+      },
+      "medianHospital": {
+        "cost": 8000,
+        "notes": "Standard workup"
+      },
+      "averageSavingsWithJanAushadhi": "30-50% on medicines"
+    },
+    {
+      "condition": "Eye Infection (Conjunctivitis)",
+      "type": "Infection",
+      "publicHospital": {
+        "cost": 500,
+        "notes": "Eye hospital"
+      },
+      "privateHospital": {
+        "cost": 8000,
+        "notes": "Ophthalmologist"
+      },
+      "medianHospital": {
+        "cost": 2500,
+        "notes": "Eye clinic"
+      },
+      "averageSavingsWithJanAushadhi": "40-60% on eye drops"
+    },
+    {
+      "condition": "Ear Infection (Otitis Media)",
+      "type": "Infection",
+      "publicHospital": {
+        "cost": 1500,
+        "notes": "ENT department"
+      },
+      "privateHospital": {
+        "cost": 25000,
+        "notes": "With audiology"
+      },
+      "medianHospital": {
+        "cost": 8000,
+        "notes": "Standard ENT"
+      },
+      "averageSavingsWithJanAushadhi": "50-70% on ear drops"
+    },
+    {
+      "condition": "Gastroenteritis",
+      "type": "Infection",
+      "publicHospital": {
+        "cost": 2000,
+        "notes": "ORS + IV fluids"
+      },
+      "privateHospital": {
+        "cost": 25000,
+        "notes": "With cultures"
+      },
+      "medianHospital": {
+        "cost": 8000,
+        "notes": "Standard care"
+      },
+      "hospitalStay": "1-3 days",
+      "averageSavingsWithJanAushadhi": "30-40% on ORS/IV fluids"
+    },
+    {
+      "condition": "Kidney Stone (PCNL)",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 35000,
+        "notes": "Government hospital"
+      },
+      "privateHospital": {
+        "cost": 200000,
+        "notes": "Laser PCNL"
+      },
+      "medianHospital": {
+        "cost": 85000,
+        "notes": "Standard PCNL"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100%"}
+      ],
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "Prostate (TURP)",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 25000,
+        "notes": "Government hospital"
+      },
+      "privateHospital": {
+        "cost": 150000,
+        "notes": "Laser TURP"
+      },
+      "medianHospital": {
+        "cost": 65000,
+        "notes": "Standard TURP"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100%"}
+      ],
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "Hysterectomy",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 20000,
+        "notes": "Abdominal"
+      },
+      "privateHospital": {
+        "cost": 150000,
+        "notes": "Laparoscopic"
+      },
+      "medianHospital": {
+        "cost": 65000,
+        "notes": "Abdominal"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100%"}
+      ],
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "Varicose Veins Surgery",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 15000,
+        "notes": "Government hospital"
+      },
+      "privateHospital": {
+        "cost": 120000,
+        "notes": "Laser ablation"
+      },
+      "medianHospital": {
+        "cost": 45000,
+        "notes": "Standard surgery"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100% if medical"}
+      ],
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "Carpal Tunnel Release",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 8000,
+        "notes": "Day care"
+      },
+      "privateHospital": {
+        "cost": 65000,
+        "notes": "With nerve study"
+      },
+      "medianHospital": {
+        "cost": 25000,
+        "notes": "Standard"
+      },
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "Thyroid Surgery",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 25000,
+        "notes": "Government hospital"
+      },
+      "privateHospital": {
+        "cost": 180000,
+        "notes": "Minimally invasive"
+      },
+      "medianHospital": {
+        "cost": 75000,
+        "notes": "Standard"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100% if cancer"}
+      ],
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "Breast Lump Excision",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 8000,
+        "notes": "Day care"
+      },
+      "privateHospital": {
+        "cost": 75000,
+        "notes": "With biopsy"
+      },
+      "medianHospital": {
+        "cost": 30000,
+        "notes": "Standard"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "If cancer confirmed"}
+      ],
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "Piles (Hemorrhoids)",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 8000,
+        "notes": "Stapler"
+      },
+      "privateHospital": {
+        "cost": 85000,
+        "notes": "Laser"
+      },
+      "medianHospital": {
+        "cost": 35000,
+        "notes": "Standard"
+      },
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "Fistula Surgery",
+      "type": "Surgical",
+      "publicHospital": {
+        "cost": 12000,
+        "notes": "Complex"
+      },
+      "privateHospital": {
+        "cost": 120000,
+        "notes": "VAAFT"
+      },
+      "medianHospital": {
+        "cost": 45000,
+        "notes": "Standard"
+      },
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "Fracture (Arm/Leg)",
+      "type": "Trauma",
+      "publicHospital": {
+        "cost": 15000,
+        "notes": "With pinning"
+      },
+      "privateHospital": {
+        "cost": 150000,
+        "notes": "Plating/nailing"
+      },
+      "medianHospital": {
+        "cost": 55000,
+        "notes": "Standard"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100%"}
+      ],
+      "averageSavingsWithJanAushadhi": 0
+    },
+    {
+      "condition": "ACL Reconstruction",
+      "type": "Sports Surgery",
+      "publicHospital": {
+        "cost": 35000,
+        "notes": "With graft"
+      },
+      "privateHospital": {
+        "cost": 200000,
+        "notes": "Arthroscopic"
+      },
+      "medianHospital": {
+        "cost": 85000,
+        "notes": "Arthroscopic"
+      },
+      "governmentSchemes": [
+        {"scheme": "PM-JAY", "coverage": "100%"}
+      ],
+      "averageSavingsWithJanAushadhi": 0
+    }
+  ],
+  "cityMultipliers": {
+    "village": 0.6,
+    "tier3": 0.8,
+    "tier2": 1.0,
+    "tier1": 1.3,
+    "metro": 1.5,
+    "delhiMumbai": 1.6,
+    "bangaloreChennai": 1.5,
+    "hyderabadKolkata": 1.4
   },
-  "heart_bypass_cabg": {
-    "public": "₹1.5–3L",
-    "private": "₹3–8L",
-    "pmjay": "Covered up to ₹5L",
-    "meds_monthly": "₹2,500",
-    "recovery": "3-6 months"
-  },
-  "cancer_chemotherapy": {
-    "per_cycle_generic": "₹8,000–25,000",
-    "per_cycle_branded": "₹50,000–2,00,000",
-    "full_course": "₹2.5–25L",
-    "pmjay": "Covered (Specific cycles)"
-  },
-  "kidney_dialysis": {
-    "per_session_private": "₹2,500–5,000",
-    "per_session_pmjay": "Free (National Dialysis Program)",
-    "monthly_cost": "₹20,000–40,000",
-    "transplant_cost": "₹5L–15L"
-  },
-  "maternity_delivery": {
-    "normal_private": "₹40,000–70,000",
-    "c_section_private": "₹80,000–1,50,000",
-    "jssk_public": "Free",
-    "post_natal_6mo": "₹15,000"
+  "hospitalTypeMultipliers": {
+    "government": 0.3,
+    "gratuityHospital": 0.5,
+    "charity": 0.6,
+    "trust": 0.8,
+    "midSegment": 1.0,
+    "corporate": 1.3,
+    "superSpecialty": 1.5,
+    "international": 2.5
   }
 }

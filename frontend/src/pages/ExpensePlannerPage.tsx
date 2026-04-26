@@ -22,6 +22,7 @@ const ExpensePlannerPage = () => {
   const [formData, setFormData] = useState({
     age: '',
     chronicConditions: '',
+    income: '',
     familySize: '',
     coverage: 'none',
     location: '',
@@ -32,20 +33,48 @@ const ExpensePlannerPage = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      // Simulate real calculation latency
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const incomeMonthly = parseInt(formData.income || '50000');
+      const familySize = parseInt(formData.familySize || '4');
+      const age = parseInt(formData.age || '30');
+      const hasConditions = formData.history.toLowerCase().includes('diabetes') || 
+                        formData.history.toLowerCase().includes('bp') ||
+                        formData.history.toLowerCase().includes('heart') ||
+                        formData.history.toLowerCase().includes('cancer');
+      
+      const cityTiers = { delhi: 1.6, mumbai: 1.6, bangalore: 1.5, chennai: 1.5, hyderabad: 1.4, kolkata: 1.4, other: 1.0 };
+      const cityKey = Object.keys(cityTiers).find(k => formData.location?.toLowerCase().includes(k)) || 'other';
+      const cityMultiplier = cityTiers[cityKey];
+      
+      const baseAnnual = 25000 * cityMultiplier;
+      const familyMultiplier = familySize > 4 ? 1.3 : familySize > 2 ? 1.1 : 1.0;
+      const conditionMultiplier = hasConditions ? 1.8 : 1.0;
+      const ageMultiplier = age > 50 ? 1.5 : age > 35 ? 1.2 : 1.0;
+      
+      const estimatedAnnualCost = Math.round(baseAnnual * familyMultiplier * conditionMultiplier * ageMultiplier);
+      const riskLevel = conditionMultiplier > 1.5 || ageMultiplier > 1.3 ? 'High' : 'Medium';
+      const recommendedEmergencyFund = Math.round(estimatedAnnualCost * 2.5 * (riskLevel === 'High' ? 1.5 : 1.0));
+      
+      const costBreakdown = [
+        { category: "Routine Checkups", amount: Math.round(estimatedAnnualCost * 0.18), explanation: "Regular consultations and preventive screenings.", color: "#65b5ff" },
+        { category: "Medicines", amount: Math.round(estimatedAnnualCost * 0.35), explanation: "Monthly maintenance drugs for identified conditions.", color: "#0bdf50" },
+        { category: "Diagnostics", amount: Math.round(estimatedAnnualCost * 0.24), explanation: "Bi-annual blood work and required scans.", color: "#ff2067" },
+        { category: "Incidentals", amount: Math.round(estimatedAnnualCost * 0.23), explanation: "Buffer for acute illnesses and OPD visits.", color: "#fe4c02" }
+      ];
+      
+      let advice = `Based on your profile in ${formData.location || 'your area'}, we estimate annual healthcare costs at ₹${(estimatedAnnualCost/100000).toFixed(1)}L.`;
+      if (hasConditions) {
+        advice += " Your medical history suggests a need for regular monitoring and maintenance medication.";
+      }
+      if (riskLevel === 'High') {
+        advice += " We recommend prioritizing health insurance with OPD cover and building a ₹" + (recommendedEmergencyFund/100000).toFixed(1) + "L emergency fund.";
+      }
       
       const mockResult = {
-        estimatedAnnualCost: 85000,
-        riskLevel: "Medium",
-        recommendedEmergencyFund: 250000,
-        costBreakdown: [
-          { category: "Routine Checkups", amount: 15000, explanation: "Regular consultations and preventive screenings.", color: "#65b5ff" },
-          { category: "Medicines", amount: 30000, explanation: "Monthly maintenance drugs for identified conditions.", color: "#0bdf50" },
-          { category: "Diagnostics", amount: 20000, explanation: "Bi-annual blood work and required scans.", color: "#ff2067" },
-          { category: "Incidentals", amount: 20000, explanation: "Buffer for acute illnesses and OPD visits.", color: "#fe4c02" }
-        ],
-        planningAdvice: "Your medical history suggests a pattern of recurring respiratory issues. We recommend prioritizing a health insurance policy with zero-co-pay and an OPD cover. Additionally, building a ₹2.5L emergency fund will cover 95% of common hospital room-rent benchmarks in your city."
+        estimatedAnnualCost,
+        riskLevel,
+        recommendedEmergencyFund,
+        costBreakdown,
+        planningAdvice: advice
       };
       
       setPendingResults(mockResult);

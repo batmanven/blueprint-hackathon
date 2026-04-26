@@ -1,74 +1,828 @@
 {
-  "hospital_categories": ["NABH Accredited", "Non-NABH Accredited"],
-  "standard_procedures": [
+  "metadata": {
+    "source": "CGHS Rate Card 2024",
+    "description": "Central Government Health Scheme Rate Card for medical procedures",
+    "lastUpdated": "2024-01-01"
+  },
+  "procedures": [
     {
-      "description": "General Ward Consultation",
-      "cghs_rate_nabh": 350,
-      "market_average": 1200,
-      "inflation_alert": "Above 3x CGHS"
+      "code": "CARD001",
+      "category": "Cardiology",
+      "procedure": "Coronary Angiography",
+      "cghsRate": 3000,
+      "nlabRate": 2500,
+      "privateRate": 8000,
+      "notes": "Investigative procedure"
     },
     {
-      "description": "ICU Charges (per day)",
-      "cghs_rate_nabh": 5400,
-      "market_average": 25000,
-      "inflation_alert": "Above 4x CGHS"
+      "code": "CARD002",
+      "category": "Cardiology",
+      "procedure": "Coronary Angioplasty (Plain)",
+      "cghsRate": 45000,
+      "nlabRate": 35000,
+      "privateRate": 150000,
+      "notes": "Per vessel, with stent extra"
     },
     {
-      "description": "Standard Room Rent (Semi-Private)",
-      "cghs_rate_nabh": 2000,
-      "market_average": 6000,
-      "inflation_alert": "Above 3x CGHS"
+      "code": "CARD003",
+      "category": "Cardiology",
+      "procedure": "Coronary Angioplasty with Stent (Indian)",
+      "cghsRate": 75000,
+      "nlabRate": 55000,
+      "privateRate": 200000,
+      "notes": "With Indian stent"
     },
     {
-      "description": "Complete Blood Count (CBC)",
-      "cghs_rate_nabh": 150,
-      "market_average": 500,
-      "inflation_alert": "Above 3x CGHS"
+      "code": "CARD004",
+      "category": "Cardiology",
+      "procedure": "Coronary Angioplasty with Stent (Import)",
+      "cghsRate": 100000,
+      "nlabRate": 80000,
+      "privateRate": 350000,
+      "notes": "With imported stent"
     },
     {
-      "description": "MRI Brain (Plain)",
-      "cghs_rate_nabh": 2500,
-      "market_average": 8000,
-      "inflation_alert": "Above 3x CGHS"
+      "code": "CARD005",
+      "category": "Cardiology",
+      "procedure": "CABG (Bypass Surgery)",
+      "cghsRate": 150000,
+      "nlabRate": 110000,
+      "privateRate": 400000,
+      "notes": "Triple vessel"
     },
     {
-      "description": "Normal Delivery",
-      "cghs_rate_nabh": 13800,
-      "market_average": 45000,
-      "inflation_alert": "Above 3x CGHS"
+      "code": "CARD006",
+      "category": "Cardiology",
+      "procedure": "Valve Replacement (MVR/AVR)",
+      "cghsRate": 180000,
+      "nlabRate": 140000,
+      "privateRate": 450000,
+      "notes": "Mechanical"
     },
     {
-      "description": "Cataract Surgery (Standard)",
-      "cghs_rate_nabh": 6500,
-      "market_average": 25000,
-      "inflation_alert": "Above 3x CGHS"
+      "code": "CARD007",
+      "category": "Cardiology",
+      "procedure": "Pacemaker Insertion (Single Chamber)",
+      "cghsRate": 45000,
+      "nlabRate": 35000,
+      "privateRate": 120000,
+      "notes": "Without device cost"
+    },
+    {
+      "code": "CARD008",
+      "category": "Cardiology",
+      "procedure": "Pacemaker Insertion (Double Chamber)",
+      "cghsRate": 85000,
+      "nlabRate": 65000,
+      "privateRate": 200000,
+      "notes": "Without device cost"
+    },
+    {
+      "code": "CARD009",
+      "category": "Cardiology",
+      "procedure": "ICD Insertion",
+      "cghsRate": 125000,
+      "nlabRate": 95000,
+      "privateRate": 350000,
+      "notes": "Without device"
+    },
+    {
+      "code": "CARD010",
+      "category": "Cardiology",
+      "procedure": "CRT-P/CRT-D",
+      "cghsRate": 180000,
+      "nlabRate": 140000,
+      "privateRate": 500000,
+      "notes": "Without device"
+    },
+    {
+      "code": "NEUR001",
+      "category": "Neurosurgery",
+      "procedure": "Craniotomy (Basic)",
+      "cghsRate": 85000,
+      "nlabRate": 65000,
+      "privateRate": 250000,
+      "notes": "Excluding implants"
+    },
+    {
+      "code": "NEUR002",
+      "category": "Neurosurgery",
+      "procedure": "Craniotomy for Tumor",
+      "cghsRate": 120000,
+      "nlabRate": 90000,
+      "privateRate": 350000,
+      "notes": "With microscope"
+    },
+    {
+      "code": "NEUR003",
+      "category": "Neurosurgery",
+      "procedure": "VP Shunt",
+      "cghsRate": 55000,
+      "nlabRate": 40000,
+      "privateRate": 150000,
+      "notes": "With shunt"
+    },
+    {
+      "code": "NEUR004",
+      "category": "Neurosurgery",
+      "procedure": "Cranioplasty",
+      "cghsRate": 75000,
+      "nlabRate": 55000,
+      "privateRate": 200000,
+      "notes": "With implant"
+    },
+    {
+      "code": "NEUR005",
+      "category": "Neurosurgery",
+      "procedure": "Spinal Surgery (Disc)",
+      "cghsRate": 95000,
+      "nlabRate": 70000,
+      "privateRate": 280000,
+      "notes": "Lumbar"
+    },
+    {
+      "code": "NEUR006",
+      "category": "Neurosurgery",
+      "procedure": "Spinal Fusion",
+      "cghsRate": 140000,
+      "nlabRate": 100000,
+      "privateRate": 400000,
+      "notes": "With implant"
+    },
+    {
+      "code": "ORTH001",
+      "category": "Orthopedics",
+      "procedure": "Total Knee Replacement (Unilateral)",
+      "cghsRate": 90000,
+      "nlabRate": 70000,
+      "privateRate": 250000,
+      "notes": "With implant"
+    },
+    {
+      "code": "ORTH002",
+      "category": "Orthopedics",
+      "procedure": "Total Knee Replacement (Bilateral)",
+      "cghsRate": 170000,
+      "nlabRate": 130000,
+      "privateRate": 450000,
+      "notes": "With implant"
+    },
+    {
+      "code": "ORTH003",
+      "category": "Orthopedics",
+      "procedure": "Total Hip Replacement",
+      "cghsRate": 110000,
+      "nlabRate": 85000,
+      "privateRate": 300000,
+      "notes": "With implant"
+    },
+    {
+      "code": "ORTH004",
+      "category": "Orthopedics",
+      "procedure": "Hip Resurfacing",
+      "cghsRate": 120000,
+      "nlabRate": 90000,
+      "privateRate": 350000,
+      "notes": "With implant"
+    },
+    {
+      "code": "ORTH005",
+      "category": "Orthopedics",
+      "procedure": "Shoulder Replacement",
+      "cghsRate": 100000,
+      "nlabRate": 75000,
+      "privateRate": 280000,
+      "notes": "With implant"
+    },
+    {
+      "code": "ORTH006",
+      "category": "Orthopedics",
+      "procedure": "Elbow Replacement",
+      "cghsRate": 95000,
+      "nlabRate": 70000,
+      "privateRate": 250000,
+      "notes": "With implant"
+    },
+    {
+      "code": "ORTH007",
+      "category": "Orthopedics",
+      "procedure": "Fracture Fixation (Long Bone)",
+      "cghsRate": 25000,
+      "nlabRate": 18000,
+      "privateRate": 80000,
+      "notes": "Excluding implant"
+    },
+    {
+      "code": "ORTH008",
+      "category": "Orthopedics",
+      "procedure": "Arthroscopy (Diagnostic)",
+      "cghsRate": 22000,
+      "nlabRate": 16000,
+      "privateRate": 60000,
+      "notes": "Knee"
+    },
+    {
+      "code": "ORTH009",
+      "category": "Orthopedics",
+      "procedure": "Arthroscopy (Surgical)",
+      "cghsRate": 40000,
+      "nlabRate": 30000,
+      "privateRate": 120000,
+      "notes": "Meniscectomy"
+    },
+    {
+      "code": "ORTH010",
+      "category": "Orthopedics",
+      "procedure": "ACL Reconstruction",
+      "cghsRate": 55000,
+      "nlabRate": 40000,
+      "privateRate": 150000,
+      "notes": "With graft"
+    },
+    {
+      "code": "GAST001",
+      "category": "Gastroenterology",
+      "procedure": "Upper GI Endoscopy",
+      "cghsRate": 2000,
+      "nlabRate": 1500,
+      "privateRate": 5000,
+      "notes": "Diagnostic"
+    },
+    {
+      "code": "GAST002",
+      "category": "Gastroenterology",
+      "procedure": "Colonoscopy",
+      "cghsRate": 3500,
+      "nlabRate": 2500,
+      "privateRate": 8000,
+      "notes": "Diagnostic"
+    },
+    {
+      "code": "GAST003",
+      "category": "Gastroenterology",
+      "procedure": "ERCP (Diagnostic)",
+      "cghsRate": 12000,
+      "nlabRate": 9000,
+      "privateRate": 35000,
+      "notes": "papillotomy"
+    },
+    {
+      "code": "GAST004",
+      "category": "Gastroenterology",
+      "procedure": "ERCP (Therapeutic)",
+      "cghsRate": 25000,
+      "nlabRate": 18000,
+      "privateRate": 65000,
+      "notes": "Stent placement"
+    },
+    {
+      "code": "GAST005",
+      "category": "Gastroenterology",
+      "procedure": "Sclerotherapy (AVU)",
+      "cghsRate": 5000,
+      "nlabRate": 3500,
+      "privateRate": 12000,
+      "notes": "Per session"
+    },
+    {
+      "code": "GAST006",
+      "category": "Gastroenterology",
+      "procedure": "Banding (AVU)",
+      "cghsRate": 6000,
+      "nlabRate": 4500,
+      "privateRate": 15000,
+      "notes": "Per session"
+    },
+    {
+      "code": "GAST007",
+      "category": "Gastroenterology",
+      "procedure": "PEG Tube Placement",
+      "cghsRate": 15000,
+      "nlabRate": 11000,
+      "privateRate": 40000,
+      "notes": "With tube"
+    },
+    {
+      "code": "GAST008",
+      "category": "Gastroenterology",
+      "procedure": "Liver Biopsy",
+      "cghsRate": 8000,
+      "nlabRate": 6000,
+      "privateRate": 25000,
+      "notes": "Percutaneous"
+    },
+    {
+      "code": "GAST009",
+      "category": "Gastroenterology",
+      "procedure": "TIPS",
+      "cghsRate": 125000,
+      "nlabRate": 95000,
+      "privateRate": 350000,
+      "notes": "With stent"
+    },
+    {
+      "code": "GAST010",
+      "category": "Gastroenterology",
+      "procedure": "Laparoscopic Cholecystectomy",
+      "cghsRate": 50000,
+      "nlabRate": 38000,
+      "privateRate": 150000,
+      "notes": "Gallbladder removal"
+    },
+    {
+      "code": "ONCO001",
+      "category": "Oncology",
+      "procedure": "Chemotherapy Cycle",
+      "cghsRate": 8000,
+      "nlabRate": 6000,
+      "privateRate": 25000,
+      "notes": "Standard"
+    },
+    {
+      "code": "ONCO002",
+      "category": "Oncology",
+      "procedure": "Targeted Therapy Cycle",
+      "cghsRate": 45000,
+      "nlabRate": 35000,
+      "privateRate": 150000,
+      "notes": "Monoclonal antibody"
+    },
+    {
+      "code": "ONCO003",
+      "category": "Oncology",
+      "procedure": "Immunotherapy Cycle",
+      "cghsRate": 85000,
+      "nlabRate": 65000,
+      "privateRate": 250000,
+      "notes": "Checkpoint inhibitor"
+    },
+    {
+      "code": "ONCO004",
+      "category": "Oncology",
+      "procedure": "Radiation (External)",
+      "cghsRate": 2500,
+      "nlabRate": 2000,
+      "privateRate": 8000,
+      "notes": "Per fraction"
+    },
+    {
+      "code": "ONCO005",
+      "category": "Oncology",
+      "procedure": "Radiation (IMRT)",
+      "cghsRate": 4500,
+      "nlabRate": 3500,
+      "privateRate": 15000,
+      "notes": "Per fraction"
+    },
+    {
+      "code": "ONCO006",
+      "category": "Oncology",
+      "procedure": "Brachytherapy",
+      "cghsRate": 15000,
+      "nlabRate": 11000,
+      "privateRate": 50000,
+      "notes": "Per session"
+    },
+    {
+      "code": "ONCO007",
+      "category": "Oncology",
+      "procedure": "SRS/SRT",
+      "cghsRate": 85000,
+      "nlabRate": 65000,
+      "privateRate": 250000,
+      "notes": "Session"
+    },
+    {
+      "code": "ONCO008",
+      "category": "Oncology",
+      "procedure": "Palliative Radiotherapy",
+      "cghsRate": 5500,
+      "nlabRate": 4000,
+      "privateRate": 18000,
+      "notes": "Per fraction"
+    },
+    {
+      "code": "URO001",
+      "category": "Urology",
+      "procedure": "TURP",
+      "cghsRate": 45000,
+      "nlabRate": 35000,
+      "privateRate": 120000,
+      "notes": "Prostate"
+    },
+    {
+      "code": "URO002",
+      "category": "Urology",
+      "procedure": "PCNL (Unilateral)",
+      "cghsRate": 50000,
+      "nlabRate": 38000,
+      "privateRate": 150000,
+      "notes": "Kidney stone"
+    },
+    {
+      "code": "URO003",
+      "category": "Urology",
+      "procedure": "DJ Stent Placement",
+      "cghsRate": 15000,
+      "nlabRate": 11000,
+      "privateRate": 45000,
+      "notes": "Unilateral"
+    },
+    {
+      "code": "URO004",
+      "category": "Urology",
+      "procedure": "URS",
+      "cghsRate": 35000,
+      "nlabRate": 25000,
+      "privateRate": 100000,
+      "notes": "Ureteroscopy"
+    },
+    {
+      "code": "URO005",
+      "category": "Urology",
+      "procedure": "Lithotripsy (ESWL)",
+      "cghsRate": 25000,
+      "nlabRate": 18000,
+      "privateRate": 75000,
+      "notes": "Per session"
+    },
+    {
+      "code": "URO006",
+      "category": "Urology",
+      "procedure": "Cystectomy (Partial)",
+      "cghsRate": 85000,
+      "nlabRate": 65000,
+      "privateRate": 250000,
+      "notes": "Nephrectomy"
+    },
+    {
+      "code": "URO007",
+      "category": "Urology",
+      "procedure": "Radical Nephrectomy",
+      "cghsRate": 110000,
+      "nlabRate": 85000,
+      "privateRate": 300000,
+      "notes": "Kidney cancer"
+    },
+    {
+      "code": "URO008",
+      "category": "Urology",
+      "procedure": "Prostatectomy",
+      "cghsRate": 95000,
+      "nlabRate": 70000,
+      "privateRate": 280000,
+      "notes": "Radical"
+    },
+    {
+      "code": "URO009",
+      "category": "Urology",
+      "procedure": "Circumcision",
+      "cghsRate": 8000,
+      "nlabRate": 6000,
+      "privateRate": 25000,
+      "notes": "Conventional"
+    },
+    {
+      "code": "URO010",
+      "category": "Urology",
+      "procedure": "Hydrocele Repair",
+      "cghsRate": 15000,
+      "nlabRate": 11000,
+      "privateRate": 45000,
+      "notes": "Unilateral"
+    },
+    {
+      "code": "GYNE001",
+      "category": "Gynecology",
+      "procedure": "Normal Delivery",
+      "cghsRate": 5000,
+      "nlabRate": 3500,
+      "privateRate": 25000,
+      "notes": "In government hospital"
+    },
+    {
+      "code": "GYNE002",
+      "category": "Gynecology",
+      "procedure": "Caesarean Section",
+      "cghsRate": 15000,
+      "nlabRate": 10000,
+      "privateRate": 50000,
+      "notes": "Emergency/Elective"
+    },
+    {
+      "code": "GYNE003",
+      "category": "Gynecology",
+      "procedure": "Hysterectomy (Abdominal)",
+      "cghsRate": 35000,
+      "nlabRate": 25000,
+      "privateRate": 100000,
+      "notes": "Total"
+    },
+    {
+      "code": "GYNE004",
+      "category": "Gynecology",
+      "procedure": "Hysterectomy (Vaginal)",
+      "cghsRate": 30000,
+      "nlabRate": 22000,
+      "privateRate": 85000,
+      "notes": "Vaginal"
+    },
+    {
+      "code": "GYNE005",
+      "category": "Gynecology",
+      "procedure": "Laparoscopic Hysterectomy",
+      "cghsRate": 45000,
+      "nlabRate": 35000,
+      "privateRate": 150000,
+      "notes": "Total"
+    },
+    {
+      "code": "GYNE006",
+      "category": "Gynecology",
+      "procedure": "Ovarian Cystectomy",
+      "cghsRate": 25000,
+      "nlabRate": 18000,
+      "privateRate": 75000,
+      "notes": "Laparoscopic"
+    },
+    {
+      "code": "GYNE007",
+      "category": "Gynecology",
+      "procedure": "Myomectomy",
+      "cghsRate": 35000,
+      "nlabRate": 25000,
+      "privateRate": 100000,
+      "notes": "Abdominal"
+    },
+    {
+      "code": "GYNE008",
+      "category": "Gynecology",
+      "procedure": "D&C",
+      "cghsRate": 5000,
+      "nlabRate": 3500,
+      "privateRate": 15000,
+      "notes": "Diagnostic"
+    },
+    {
+      "code": "OPH001",
+      "category": "Ophthalmology",
+      "procedure": "Cataract Surgery (SICS)",
+      "cghsRate": 5000,
+      "nlabRate": 3500,
+      "privateRate": 25000,
+      "notes": "With IOL"
+    },
+    {
+      "code": "OPH002",
+      "category": "Ophthalmology",
+      "procedure": "Cataract Surgery (Phaco)",
+      "cghsRate": 12000,
+      "nlabRate": 9000,
+      "privateRate": 45000,
+      "notes": "With IOL"
+    },
+    {
+      "code": "OPH003",
+      "category": "Ophthalmology",
+      "procedure": "Trabeculectomy",
+      "cghsRate": 15000,
+      "nlabRate": 11000,
+      "privateRate": 45000,
+      "notes": "Glaucoma"
+    },
+    {
+      "code": "OPH004",
+      "category": "Ophthalmology",
+      "procedure": "Retinal Detachment Surgery",
+      "cghsRate": 35000,
+      "nlabRate": 25000,
+      "privateRate": 100000,
+      "notes": "Scleral buckle"
+    },
+    {
+      "code": "OPH005",
+      "category": "Ophthalmology",
+      "procedure": "Vitrectomy",
+      "cghsRate": 45000,
+      "nlabRate": 35000,
+      "privateRate": 120000,
+      "notes": "Pars plana"
+    },
+    {
+      "code": "OPH006",
+      "category": "Ophthalmology",
+      "procedure": "Corneal Transplant",
+      "cghsRate": 35000,
+      "nlabRate": 25000,
+      "privateRate": 85000,
+      "notes": "Full thickness"
+    },
+    {
+      "code": "OPH007",
+      "category": "Ophthalmology",
+      "procedure": "LASIK (One Eye)",
+      "cghsRate": 15000,
+      "nlabRate": 11000,
+      "privateRate": 45000,
+      "notes": "Refractive"
+    },
+    {
+      "code": "OPH008",
+      "category": "Ophthalmology",
+      "procedure": "Squint Surgery",
+      "cghsRate": 12000,
+      "nlabRate": 9000,
+      "privateRate": 35000,
+      "notes": "One eye"
+    },
+    {
+      "code": "ENT001",
+      "category": "ENT",
+      "procedure": "Tonsillectomy",
+      "cghsRate": 15000,
+      "nlabRate": 11000,
+      "privateRate": 45000,
+      "notes": "Adenoidectomy included"
+    },
+    {
+      "code": "ENT002",
+      "category": "ENT",
+      "procedure": "Adenoidectomy",
+      "cghsRate": 12000,
+      "nlabRate": 9000,
+      "privateRate": 35000,
+      "notes": "Alone"
+    },
+    {
+      "code": "ENT003",
+      "category": "ENT",
+      "procedure": "Septoplasty",
+      "cghsRate": 18000,
+      "nlabRate": 13000,
+      "privateRate": 55000,
+      "notes": "Nasal"
+    },
+    {
+      "code": "ENT004",
+      "category": "ENT",
+      "procedure": "FESS",
+      "cghsRate": 35000,
+      "nlabRate": 25000,
+      "privateRate": 100000,
+      "notes": "Functional endoscopic"
+    },
+    {
+      "code": "ENT005",
+      "category": "ENT",
+      "procedure": "Tympanoplasty",
+      "cghsRate": 25000,
+      "nlabRate": 18000,
+      "privateRate": 75000,
+      "notes": "Myringoplasty"
+    },
+    {
+      "code": "ENT006",
+      "category": "ENT",
+      "procedure": "Mastoidectomy",
+      "cghsRate": 35000,
+      "nlabRate": 25000,
+      "privateRate": 100000,
+      "notes": "Cortical"
+    },
+    {
+      "code": "ENT007",
+      "category": "ENT",
+      "procedure": "Stapedectomy",
+      "cghsRate": 30000,
+      "nlabRate": 22000,
+      "privateRate": 85000,
+      "notes": "With prosthesis"
+    },
+    {
+      "code": "ENT008",
+      "category": "ENT",
+      "procedure": "Thyroidectomy (Partial)",
+      "cghsRate": 35000,
+      "nlabRate": 25000,
+      "privateRate": 100000,
+      "notes": "Lobectomy"
+    },
+    {
+      "code": "ENT009",
+      "category": "ENT",
+      "procedure": "Thyroidectomy (Total)",
+      "cghsRate": 50000,
+      "nlabRate": 38000,
+      "privateRate": 150000,
+      "notes": "Total"
+    },
+    {
+      "code": "ENT010",
+      "category": "ENT",
+      "procedure": "Parotidectomy",
+      "cghsRate": 45000,
+      "nlabRate": 35000,
+      "privateRate": 120000,
+      "notes": "Superficial"
     }
   ],
-  "consumables": {
-    "normal_saline_500ml": { "benchmark": 30, "market_avg": 40, "hospital_max": 500 },
-    "surgical_gloves_pair": { "benchmark": 10, "market_avg": 15, "hospital_max": 150 },
-    "iv_set": { "benchmark": 25, "market_avg": 35, "hospital_max": 300 },
-    "bandage_roll": { "benchmark": 15, "market_avg": 25, "hospital_max": 200 },
-    "syrings_5ml": { "benchmark": 5, "market_avg": 8, "hospital_max": 80 },
-    "n95_mask": { "benchmark": 20, "market_avg": 30, "hospital_max": 250 },
-    "surgical_mask": { "benchmark": 3, "market_avg": 5, "hospital_max": 50 }
+  "consumables": [
+    {"item": "N95 Mask", "marketPrice": 150, "cghsCeiling": 80, "notes": "Each"},
+    {"item": "Surgical Mask", "marketPrice": 25, "cghsCeiling": 15, "notes": "3-ply"},
+    {"item": "Latex Gloves (Pair)", "marketPrice": 8, "cghsCeiling": 5, "notes": "Sterile"},
+    {"item": "Nitrile Gloves (Pair)", "marketPrice": 15, "cghsCeiling": 10, "notes": "Sterile"},
+    {"item": "Surgical Spirit (500ml)", "marketPrice": 80, "cghsCeiling": 50, "notes": "70%"},
+    {"item": "Povidone Iodine (500ml)", "marketPrice": 65, "cghsCeiling": 40, "notes": "5%"},
+    {"item": "Cotton Roll (500g)", "marketPrice": 120, "cghsCeiling": 75, "notes": "Medicot"},
+    {"item": "Gauze Roll", "marketPrice": 45, "cghsCeiling": 25, "notes": "1 meter"},
+    {"item": "Bandage (4 inch)", "marketPrice": 25, "cghsCeiling": 15, "notes": "Cotton"},
+    {"item": "IV Set", "marketPrice": 35, "cghsCeiling": 20, "notes": "Standard"},
+    {"item": "IV Cannula (18G)", "marketPrice": 85, "cghsCeiling": 50, "notes": "With cap"},
+    {"item": "IV Cannula (20G)", "marketPrice": 85, "cghsCeiling": 50, "notes": "With cap"},
+    {"item": "IV Cannula (22G)", "marketPrice": 85, "cghsCeiling": 50, "notes": "With cap"},
+    {"item": "Syringe 2ml", "marketPrice": 5, "cghsCeiling": 3, "notes": "DISPOVAN"},
+    {"item": "Syringe 5ml", "marketPrice": 6, "cghsCeiling": 4, "notes": "DISPOVAN"},
+    {"item": "Syringe 10ml", "marketPrice": 8, "cghsCeiling": 5, "notes": "DISPOVAN"},
+    {"item": "Syringe 20ml", "marketPrice": 10, "cghsCeiling": 6, "notes": "DISPOVAN"},
+    {"item": " Needle (22G)", "marketPrice": 3, "cghsCeiling": 2, "notes": "Disposable"},
+    {"item": "Scalp Vein Set", "marketPrice": 25, "cghsCeiling": 15, "notes": "Butterfly"},
+    {"item": "Ryle's Tube (Small)", "marketPrice": 35, "cghsCeiling": 20, "notes": "NG Tube"},
+    {"item": "Ryle's Tube (Large)", "marketPrice": 45, "cghsCeiling": 25, "notes": "NG Tube"},
+    {"item": "Foley's Catheter", "marketPrice": 85, "cghsCeiling": 50, "notes": "Silicone 2-way"},
+    {"item": "Urine Bag", "marketPrice": 35, "cghsCeiling": 20, "notes": "Standard"},
+    {"item": "ECG Electrodes", "marketPrice": 150, "cghsCeiling": 80, "notes": "Set of 4"},
+    {"item": "ECG Paper", "marketPrice": 120, "cghsCeiling": 70, "notes": "Pack of 500"},
+    {"item": "Ultrasound Gel", "marketPrice": 150, "cghsCeiling": 80, "notes": "500ml"},
+    {"item": "Surgical Blade", "marketPrice": 15, "cghsCeiling": 10, "notes": "No. 22"},
+    {"item": "Suture (Vicryl 2-0)", "marketPrice": 185, "cghsCeiling": 100, "notes": "Expended 36mm"},
+    {"item": "Suture (Vicryl 3-0)", "marketPrice": 175, "cghsCeiling": 95, "notes": "Expended 30mm"},
+    {"item": "Suture (Silk 2-0)", "marketPrice": 85, "cghsCeiling": 45, "notes": "Black braided"},
+    {"item": "Suture (Prolene 3-0)", "marketPrice": 225, "cghsCeiling": 120, "notes": "Non-absorbable"},
+    {"item": "Dressing Pad", "marketPrice": 65, "cghsCeiling": 35, "notes": "10x10cm"},
+    {"item": "Gauze Pad", "marketPrice": 25, "cghsCeiling": 15, "notes": "5x5cm"},
+    {"item": "Elastic Bandage", "marketPrice": 85, "cghsCeiling": 50, "notes": "4 inch"},
+    {"item": "Plaster of Paris", "marketPrice": 45, "cghsCeiling": 25, "notes": "Roll"},
+    {"item": "Slab", "marketPrice": 85, "cghsCeiling": 50, "notes": "POP Slab"},
+    {"item": "Trolley Sheet", "marketPrice": 45, "cghsCeiling": 25, "notes": "Disposable"}
+  ],
+  "diagnostics": [
+    {"test": "Complete Blood Count", "cghsRate": 250, "privateRate": 800, "notes": "24 parameters"},
+    {"test": "尿 Routine", "cghsRate": 100, "privateRate": 350, "notes": "Physical + Chemical"},
+    {"test": "Stool Routine", "cghsRate": 100, "privateRate": 350, "notes": "Physical + Chemical"},
+    {"test": "Blood Glucose (Fasting)", "cghsRate": 50, "privateRate": 150, "notes": "FBS"},
+    {"test": "Blood Glucose (PP)", "cghsRate": 50, "privateRate": 150, "notes": "PPBS"},
+    {"test": "HbA1c", "cghsRate": 400, "privateRate": 850, "notes": "Glycated Hb"},
+    {"test": "Lipid Profile", "cghsRate": 450, "privateRate": 1200, "notes": "Complete"},
+    {"test": "Liver Function", "cghsRate": 650, "privateRate": 1800, "notes": "12 parameters"},
+    {"test": "Kidney Function", "cghsRate": 400, "privateRate": 1200, "notes": "6 parameters"},
+    {"test": "Thyroid Profile", "cghsRate": 600, "privateRate": 1800, "notes": "T3,T4,TSH"},
+    {"test": "ECG", "cghsRate": 150, "privateRate": 500, "notes": "12 Lead"},
+    {"test": "2D Echocardiography", "cghsRate": 1500, "privateRate": 4000, "notes": "Complete"},
+    {"test": "TMT", "cghsRate": 1200, "privateRate": 3500, "notes": "Treadmill"},
+    {"test": "Holter Monitoring", "cghsRate": 1500, "privateRate": 4000, "notes": "24 Hours"},
+    {"test": "X-Ray (Chest PA)", "cghsRate": 150, "privateRate": 400, "notes": "Digital"},
+    {"test": "X-Ray (Abdomen)", "cghsRate": 200, "privateRate": 500, "notes": "Erect/Supine"},
+    {"test": "CT Scan (Brain)", "cghsRate": 2500, "privateRate": 6000, "notes": "Plain"},
+    {"test": "CT Scan (Chest)", "cghsRate": 3500, "privateRate": 8000, "notes": "Plain"},
+    {"test": "CT Scan (Abdomen)", "cghsRate": 4000, "privateRate": 10000, "notes": "Contrast"},
+    {"test": "MRI (Brain)", "cghsRate": 4500, "privateRate": 12000, "notes": "Plain"},
+    {"test": "MRI (Spine)", "cghsRate": 5500, "privateRate": 15000, "notes": "One level"},
+    {"test": "MRI (Joint)", "cghsRate": 5000, "privateRate": 14000, "notes": "One joint"},
+    {"test": "Ultrasound (Whole Abdomen)", "cghsRate": 800, "privateRate": 2500, "notes": "Upper+Lower"},
+    {"test": "Ultrasound (Obstetric)", "cghsRate": 600, "privateRate": 1800, "notes": "Antenatal"},
+    {"test": "Doppler (Vascular)", "cghsRate": 1500, "privateRate": 4000, "notes": "One limb"},
+    {"test": "PET CT", "cghsRate": 15000, "privateRate": 35000, "notes": "Whole body"}
+  ],
+  "wardCharges": {
+    "general": {"cghs": 500, "nlab": 300, "private": 2500, "notes": "Per day"},
+    "semi-private": {"cghs": 1000, "nlab": 600, "private": 5000, "notes": "Per day"},
+    "private": {"cghs": 2000, "nlab": 1200, "private": 10000, "notes": "Per day"},
+    "icu": {"cghs": 3500, "nlab": 2500, "private": 15000, "notes": "Per day"},
+    "nicu": {"cghs": 4000, "nlab": 3000, "private": 20000, "notes": "Per day"}
   },
-  "procedures": {
-    "cataract_surgery_phaco": { "cghs_rate": 10800, "private_avg": 45000, "description": "Includes IOL lens and procedure" },
-    "angioplasty_single_stent": { "cghs_rate": 65000, "private_avg": 180000, "description": "Excludes stent cost (capped by NPPA)" },
-    "normal_delivery": { "cghs_rate": 12000, "private_avg": 60000, "description": "Public health benchmark" },
-    "c_section": { "cghs_rate": 18000, "private_avg": 120000, "description": "Surgical delivery" },
-    "knee_replacement_single": { "cghs_rate": 120000, "private_avg": 350000, "description": "Excludes implant cost" },
-    "mri_brain_plain": { "cghs_rate": 2500, "private_avg": 8000, "description": "High resonance imaging" },
-    "ct_scan_abdomen": { "cghs_rate": 2000, "private_avg": 6000, "description": "Computed Tomography" },
-    "blood_test_cbc": { "cghs_rate": 150, "private_avg": 600, "description": "Complete Blood Count" },
-    "lipid_profile": { "cghs_rate": 300, "private_avg": 1200, "description": "Cholesterol audit" }
-  },
-  "room_rates_per_day": {
-    "general_ward": { "cghs_rate": 1000, "private_avg": 3500 },
-    "semi_private": { "cghs_rate": 2000, "private_avg": 6500 },
-    "private_room": { "cghs_rate": 3000, "private_avg": 12000 },
-    "icu_without_ventilator": { "cghs_rate": 5000, "private_avg": 25000 },
-    "icu_with_ventilator": { "cghs_rate": 8000, "private_avg": 45000 }
+  "典型Overcharges": {
+    "description": "Common overcharging patterns in private hospitals",
+    "items": [
+      {"item": "Normal Saline 500ml", "marketPrice": 35, "charged": 500, "markupPercent": 1329, "fairRate": 50},
+      {"item": "ORS Pack", "marketPrice": 8, "charged": 100, "markupPercent": 1150, "fairRate": 15},
+      {"item": "Paracetamol IV", "marketPrice": 10, "charged": 150, "markupPercent": 1400, "fairRate": 20},
+      {"item": "Gloves (Pair) - Sterile", "marketPrice": 8, "charged": 150, "markupPercent": 1775, "fairRate": 15},
+      {"item": "IV Set", "marketPrice": 25, "charged": 250, "markupPercent": 900, "fairRate": 40},
+      {"item": "Bandage", "marketPrice": 15, "charged": 200, "markupPercent": 1233, "fairRate": 30},
+      {"item": "Cotton", "marketPrice": 20, "charged": 150, "markupPercent": 650, "fairRate": 30},
+      {"item": "Syringe 5ml", "marketPrice": 6, "charged": 50, "markupPercent": 733, "fairRate": 12},
+      {"item": "Surgical Blade", "marketPrice": 8, "charged": 100, "markupPercent": 1150, "fairRate": 15},
+      {"item": "Spirit 500ml", "marketPrice": 45, "charged": 200, "markupPercent": 344, "fairRate": 60},
+      {"item": "Betadine 100ml", "marketPrice": 35, "charged": 150, "markupPercent": 329, "fairRate": 50},
+      {"item": "Glucose 5% 500ml", "marketPrice": 30, "charged": 350, "markupPercent": 1067, "fairRate": 45},
+      {"item": "Ringer Lactate 500ml", "marketPrice": 35, "charged": 300, "markupPercent": 757, "fairRate": 50},
+      {"item": "ECG", "marketPrice": 100, "charged": 800, "markupPercent": 700, "fairRate": 200},
+      {"item": "Pulse Ox", "marketPrice": 25, "charged": 200, "markupPercent": 700, "fairRate": 50},
+      {"item": "Nebulization", "marketPrice": 50, "charged": 400, "markupPercent": 700, "fairRate": 100},
+      {"item": "Catheter", "marketPrice": 45, "charged": 500, "markupPercent": 1011, "fairRate": 80},
+      {"item": "Urine Bag", "marketPrice": 20, "charged": 250, "markupPercent": 1150, "fairRate": 40},
+      {"item": "Minor OT", "marketPrice": 500, "charged": 2500, "markupPercent": 400, "fairRate": 800},
+      {"item": "Injection Room", "marketPrice": 50, "charged": 300, "markupPercent": 500, "fairRate": 100}
+    ]
   }
 }
